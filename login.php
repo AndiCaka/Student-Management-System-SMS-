@@ -1,6 +1,8 @@
+
 <?php
 require "config.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
    <!-- Mirrored from preschool.dreamguystech.com/html-template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:39 GMT -->
@@ -16,6 +18,7 @@ require "config.php";
       <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
+
       <?php
    $formValues = [];
 
@@ -85,6 +88,28 @@ if(isset($_POST['login'])){
     </div>
                            <div class="form-group">
                            <button type="submit" class="btn btn-primary px-4" name="login">Login</button>
+
+      <div class="main-wrapper login-body">
+         <div class="login-wrapper">
+            <div class="container">
+               <div class="loginbox">
+                  <div class="login-left">
+                     <img class="img-fluid" src="assets/img/logo-white.png" alt="Logo">
+                  </div>
+                  <div class="login-right">
+                     <div class="login-right-wrap">
+                        <h1>Login</h1>
+                        <p class="account-subtitle">Access to our dashboard</p>
+                        <form action="https://preschool.dreamguystech.com/html-template/index.html">
+                           <div class="form-group">
+                              <input class="form-control" type="text" placeholder="Email">
+                           </div>
+                           <div class="form-group">
+                              <input class="form-control" type="text" placeholder="Password">
+                           </div>
+                           <div class="form-group">
+                              <button class="btn btn-primary btn-block" type="submit">Login</button>
+
                            </div>
                         </form>
                         <div class="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a></div>
