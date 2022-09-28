@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-   <!-- Mirrored from preschool.dreamguystech.com/html-template/students.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:43 GMT -->
+   <!-- Mirrored from preschool.dreamguystech.com/php-template/students.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:43 GMT -->
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
@@ -17,10 +17,10 @@
       <div class="main-wrapper">
          <div class="header">
             <div class="header-left">
-               <a href="index.html" class="logo">
+               <a href="index.php" class="logo">
                <img src="assets/img/logo.png" alt="Logo">
                </a>
-               <a href="index.html" class="logo logo-small">
+               <a href="index.php" class="logo logo-small">
                <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
                </a>
             </div>
@@ -121,9 +121,9 @@
                            <p class="text-muted mb-0">Administrator</p>
                         </div>
                      </div>
-                     <a class="dropdown-item" href="profile.html">My Profile</a>
-                     <a class="dropdown-item" href="inbox.html">Inbox</a>
-                     <a class="dropdown-item" href="login.html">Logout</a>
+                     <a class="dropdown-item" href="profile.php">My Profile</a>
+                     <a class="dropdown-item" href="inbox.php">Inbox</a>
+                     <a class="dropdown-item" href="login.php">Logout</a>
                   </div>
                </li>
             </ul>
@@ -138,46 +138,46 @@
                      <li class="submenu">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="index.html">Admin Dashboard</a></li>
-                           <li><a href="teacher-dashboard.html">Teacher Dashboard</a></li>
-                           <li><a href="student-dashboard.html">Student Dashboard</a></li>
+                           <li><a href="index.php">Admin Dashboard</a></li>
+                           <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
+                           <li><a href="student-dashboard.php">Student Dashboard</a></li>
                         </ul>
                      </li>
                      <li class="submenu active">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="students.html" class="active">Student List</a></li>
-                           <li><a href="student-details.html">Student View</a></li>
-                           <li><a href="add-student.html">Student Add</a></li>
-                           <li><a href="edit-student.html">Student Edit</a></li>
+                           <li><a href="students.php" class="active">Student List</a></li>
+                           <li><a href="student-details.php">Student View</a></li>
+                           <li><a href="add-student.php">Student Add</a></li>
+                           <li><a href="edit-student.php">Student Edit</a></li>
                         </ul>
                      </li>
                      <li class="submenu">
                         <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="teachers.html">Teacher List</a></li>
-                           <li><a href="teacher-details.html">Teacher View</a></li>
-                           <li><a href="add-teacher.html">Teacher Add</a></li>
-                           <li><a href="edit-teacher.html">Teacher Edit</a></li>
+                           <li><a href="teachers.php">Teacher List</a></li>
+                           <li><a href="teacher-details.php">Teacher View</a></li>
+                           <li><a href="add-teacher.php">Teacher Add</a></li>
+                           <li><a href="edit-teacher.php">Teacher Edit</a></li>
                         </ul>
                      </li>
                      
                      <li class="submenu">
                         <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="subjects.html">Subject List</a></li>
-                           <li><a href="add-subject.html">Subject Add</a></li>
-                           <li><a href="edit-subject.html">Subject Edit</a></li>
+                           <li><a href="subjects.php">Subject List</a></li>
+                           <li><a href="add-subject.php">Subject Add</a></li>
+                           <li><a href="edit-subject.php">Subject Edit</a></li>
                         </ul>
                      </li>
                      
                      <li class="submenu">
                         <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="login.html">Login</a></li>
-                           <li><a href="register.html">Register</a></li>
-                           <li><a href="forgot-password.html">Forgot Password</a></li>
-                           <li><a href="error-404.html">Error Page</a></li>
+                           <li><a href="login.php">Login</a></li>
+                           <li><a href="register.php">Register</a></li>
+                           <li><a href="forgot-password.php">Forgot Password</a></li>
+                           <li><a href="error-404.php">Error Page</a></li>
                         </ul>
                      </li>
                      
@@ -194,13 +194,13 @@
                      <div class="col">
                         <h3 class="page-title">Students</h3>
                         <ul class="breadcrumb">
-                           <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                           <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
                            <li class="breadcrumb-item active">Students</li>
                         </ul>
                      </div>
                      <div class="col-auto text-right float-right ml-auto">
                         <a href="#" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i> Download</a>
-                        <a href="add-student.html" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                        <a href="add-student.php" class="btn btn-primary"><i class="fas fa-plus"></i></a>
                      </div>
                   </div>
                </div>
@@ -227,8 +227,8 @@
                                        <td>PRE2209</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-01.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Aaliyah</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-01.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Aaliyah</a>
                                           </h2>
                                        </td>
                                        <td>10 A</td>
@@ -238,7 +238,7 @@
                                        <td>911 Deer Ridge Drive,USA</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -251,8 +251,8 @@
                                        <td>PRE2213</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-03.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Malynne</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-03.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Malynne</a>
                                           </h2>
                                        </td>
                                        <td>8 A</td>
@@ -262,7 +262,7 @@
                                        <td>Bacardi Rd P.O. Box N-4880, New Providence</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -275,8 +275,8 @@
                                        <td>PRE2143</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-02.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Levell Scott</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-02.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Levell Scott</a>
                                           </h2>
                                        </td>
                                        <td>10 A</td>
@@ -286,7 +286,7 @@
                                        <td>P.O. Box: 41, Gaborone</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -299,8 +299,8 @@
                                        <td>PRE2431</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-03.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Minnie</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-03.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Minnie</a>
                                           </h2>
                                        </td>
                                        <td>11 C</td>
@@ -310,7 +310,7 @@
                                        <td>4771 Oral Lake Road, Golden Valley</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -323,8 +323,8 @@
                                        <td>PRE1534</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-04.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Lois A</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-04.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Lois A</a>
                                           </h2>
                                        </td>
                                        <td>10 A</td>
@@ -334,7 +334,7 @@
                                        <td>2844 Leverton Cove Road, Palmer</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -347,8 +347,8 @@
                                        <td>PRE2153</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-05.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Calvin</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-05.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Calvin</a>
                                           </h2>
                                        </td>
                                        <td>9 B</td>
@@ -358,7 +358,7 @@
                                        <td>1900 Hidden Meadow Drive, Crete</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -371,8 +371,8 @@
                                        <td>PRE1252</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-06.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Joe Kelley</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-06.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Joe Kelley</a>
                                           </h2>
                                        </td>
                                        <td>11 C</td>
@@ -382,7 +382,7 @@
                                        <td>3979 Ashwood Drive, Omaha</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -395,8 +395,8 @@
                                        <td>PRE1434</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-07.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Vincent</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-07.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Vincent</a>
                                           </h2>
                                        </td>
                                        <td>10 A</td>
@@ -406,7 +406,7 @@
                                        <td>3979 Ashwood Drive, Omaha</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -419,8 +419,8 @@
                                        <td>PRE2345</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-08.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Kozma  Tatari</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-08.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Kozma  Tatari</a>
                                           </h2>
                                        </td>
                                        <td>9 A</td>
@@ -430,7 +430,7 @@
                                        <td>Rruga E Kavajes, Condor Center, Tirana</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -443,8 +443,8 @@
                                        <td>PRE2365</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-09.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">John Chambers</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-09.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">John Chambers</a>
                                           </h2>
                                        </td>
                                        <td>11 B</td>
@@ -454,7 +454,7 @@
                                        <td>4667 Sunset Drive, Pine Bluff</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -467,8 +467,8 @@
                                        <td>PRE1234</td>
                                        <td>
                                           <h2 class="table-avatar">
-                                             <a href="student-details.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-10.jpg" alt="User Image"></a>
-                                             <a href="student-details.html">Nathan Humphries</a>
+                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-10.jpg" alt="User Image"></a>
+                                             <a href="student-details.php">Nathan Humphries</a>
                                           </h2>
                                        </td>
                                        <td>10 B</td>
@@ -478,7 +478,7 @@
                                        <td>86 Lamphey Road, Thelnetham</td>
                                        <td class="text-right">
                                           <div class="actions">
-                                             <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2">
+                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
                                              <i class="fas fa-pen"></i>
                                              </a>
                                              <a href="#" class="btn btn-sm bg-danger-light">
@@ -507,5 +507,5 @@
       <script src="assets/plugins/datatables/datatables.min.js"></script>
       <script src="assets/js/script.js"></script>
    </body>
-   <!-- Mirrored from preschool.dreamguystech.com/html-template/students.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:49 GMT -->
+   <!-- Mirrored from preschool.dreamguystech.com/php-template/students.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:49 GMT -->
 </html>

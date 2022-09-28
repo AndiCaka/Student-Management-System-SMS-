@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preschool.dreamguystech.com/html-template/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
+<!-- Mirrored from preschool.dreamguystech.com/php-template/forgot-password.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
@@ -40,7 +40,7 @@ if(isset($_POST['register'])){
                 <i class="bi bi-check2-all"></i>  <?php echo $_POST['name'] ?> added successfully!
                 </div>
             <?php
-            header("Location: login.html");
+            header("Location: login.php");
         }
     }
     else{
@@ -65,17 +65,14 @@ if(isset($_POST['register'])){
 <h1>Forgot Password?</h1>
 <p class="account-subtitle">Enter your email to get a password reset link</p>
 
-<form action="https://preschool.dreamguystech.com/html-template/login.html">
+<form action="https://preschool.dreamguystech.com/php-template/login.php">
 <div class="form-group">
-<<<<<<<< HEAD:forgot-password.html
-========
 <input class="form-control" type="text" placeholder="Name">
 </div>
 <div class="form-group">
 <input class="form-control" type="text" placeholder="Surname">
 </div>
 <div class="form-group">
-<<<<<<< HEAD
 <input class="form-control" type="text" placeholder="Gender">
 </div>
 <div class="form-group">
@@ -90,17 +87,13 @@ if(isset($_POST['register'])){
 <div class="form-group">
 <input class="form-control" type="text" placeholder="Role">
 </div>
-=======
->>>>>>>> 9c66755f0929f29f6c0d8e0550c31f62ae9b4b8e:register.php
-<input class="form-control" type="text" placeholder="Email">
-</div>
->>>>>>> 089cff21a6a3f8dd857343ecbe0b300f5edcf228
+
 <div class="form-group mb-0">
 <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
 </div>
 </form>
 
-<div class="text-center dont-have">Remember your password? <a href="login.html">Login</a></div>
+<div class="text-center dont-have">Remember your password? <a href="login.php">Login</a></div>
 </div>
 </div>
 </div>
@@ -117,11 +110,5 @@ if(isset($_POST['register'])){
 <script src="assets/js/script.js"></script>
 </body>
 
-<<<<<<<< HEAD:forgot-password.html
-<!-- Mirrored from preschool.dreamguystech.com/html-template/forgot-password.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
+<!-- Mirrored from preschool.dreamguystech.com/php-template/forgot-password.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
 </html>
-========
-<!-- Mirrored from preschool.dreamguystech.com/html-template/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
-</html>
-
->>>>>>>> 9c66755f0929f29f6c0d8e0550c31f62ae9b4b8e:register.php

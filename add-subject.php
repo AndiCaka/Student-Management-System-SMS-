@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preschool.dreamguystech.com/html-template/add-subject.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
+<!-- Mirrored from preschool.dreamguystech.com/php-template/add-subject.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
@@ -24,10 +24,10 @@
 <div class="header">
 
 <div class="header-left">
-<a href="index.html" class="logo">
+<a href="index.php" class="logo">
 <img src="assets/img/logo.png" alt="Logo">
 </a>
-<a href="index.html" class="logo logo-small">
+<a href="index.php" class="logo logo-small">
 <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
 </a>
 </div>
@@ -137,9 +137,9 @@
 <p class="text-muted mb-0">Administrator</p>
 </div>
 </div>
-<a class="dropdown-item" href="profile.html">My Profile</a>
-<a class="dropdown-item" href="inbox.html">Inbox</a>
-<a class="dropdown-item" href="login.html">Logout</a>
+<a class="dropdown-item" href="profile.php">My Profile</a>
+<a class="dropdown-item" href="inbox.php">Inbox</a>
+<a class="dropdown-item" href="login.php">Logout</a>
 </div>
 </li>
 
@@ -158,46 +158,46 @@
 <li class="submenu">
 <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="index.html">Admin Dashboard</a></li>
-<li><a href="teacher-dashboard.html">Teacher Dashboard</a></li>
-<li><a href="student-dashboard.html">Student Dashboard</a></li>
+<li><a href="index.php">Admin Dashboard</a></li>
+<li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
+<li><a href="student-dashboard.php">Student Dashboard</a></li>
 </ul>
 </li>
 <li class="submenu">
 <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="students.html">Student List</a></li>
-<li><a href="student-details.html">Student View</a></li>
-<li><a href="add-student.html">Student Add</a></li>
-<li><a href="edit-student.html">Student Edit</a></li>
+<li><a href="students.php">Student List</a></li>
+<li><a href="student-details.php">Student View</a></li>
+<li><a href="add-student.php">Student Add</a></li>
+<li><a href="edit-student.php">Student Edit</a></li>
 </ul>
 </li>
 <li class="submenu">
 <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="teachers.html">Teacher List</a></li>
-<li><a href="teacher-details.html">Teacher View</a></li>
-<li><a href="add-teacher.html">Teacher Add</a></li>
-<li><a href="edit-teacher.html">Teacher Edit</a></li>
+<li><a href="teachers.php">Teacher List</a></li>
+<li><a href="teacher-details.php">Teacher View</a></li>
+<li><a href="add-teacher.php">Teacher Add</a></li>
+<li><a href="edit-teacher.php">Teacher Edit</a></li>
 </ul>
 </li>
 
 <li class="submenu active">
 <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="subjects.html">Subject List</a></li>
-<li><a href="add-subject.html" class="active">Subject Add</a></li>
-<li><a href="edit-subject.html">Subject Edit</a></li>
+<li><a href="subjects.php">Subject List</a></li>
+<li><a href="add-subject.php" class="active">Subject Add</a></li>
+<li><a href="edit-subject.php">Subject Edit</a></li>
 </ul>
 </li>
 
 <li class="submenu">
 <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="login.html">Login</a></li>
-<li><a href="register.html">Register</a></li>
-<li><a href="forgot-password.html">Forgot Password</a></li>
-<li><a href="error-404.html">Error Page</a></li>
+<li><a href="login.php">Login</a></li>
+<li><a href="register.php">Register</a></li>
+<li><a href="forgot-password.php">Forgot Password</a></li>
+<li><a href="error-404.php">Error Page</a></li>
 </ul>
 </li>
 
@@ -216,7 +216,7 @@
 <div class="col">
 <h3 class="page-title">Add Subject</h3>
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="subjects.html">Subject</a></li>
+<li class="breadcrumb-item"><a href="subjects.php">Subject</a></li>
 <li class="breadcrumb-item active">Add Subject</li>
 </ul>
 </div>
@@ -275,5 +275,5 @@
 <script src="assets/js/script.js"></script>
 </body>
 
-<!-- Mirrored from preschool.dreamguystech.com/html-template/add-subject.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
+<!-- Mirrored from preschool.dreamguystech.com/php-template/add-subject.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 </html>

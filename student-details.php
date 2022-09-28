@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from preschool.dreamguystech.com/html-template/add-teacher.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
+<!-- Mirrored from preschool.dreamguystech.com/php-template/student-details.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:49 GMT -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-<title>Preskool - Teachers</title>
+<title>Preskool - Student Details</title>
 
 <link rel="shortcut icon" href="assets/img/favicon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
@@ -14,6 +14,8 @@
 
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
 
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -24,10 +26,10 @@
 <div class="header">
 
 <div class="header-left">
-<a href="index.html" class="logo">
+<a href="index.php" class="logo">
 <img src="assets/img/logo.png" alt="Logo">
 </a>
-<a href="index.html" class="logo logo-small">
+<a href="index.php" class="logo logo-small">
 <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
 </a>
 </div>
@@ -137,9 +139,9 @@
 <p class="text-muted mb-0">Administrator</p>
 </div>
 </div>
-<a class="dropdown-item" href="profile.html">My Profile</a>
-<a class="dropdown-item" href="inbox.html">Inbox</a>
-<a class="dropdown-item" href="login.html">Logout</a>
+<a class="dropdown-item" href="profile.php">My Profile</a>
+<a class="dropdown-item" href="inbox.php">Inbox</a>
+<a class="dropdown-item" href="login.php">Logout</a>
 </div>
 </li>
 
@@ -158,45 +160,46 @@
 <li class="submenu">
 <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="index.html">Admin Dashboard</a></li>
-<li><a href="teacher-dashboard.html">Teacher Dashboard</a></li>
-<li><a href="student-dashboard.html">Student Dashboard</a></li>
-</ul>
-</li>
-<li class="submenu">
-<a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="students.html">Student List</a></li>
-<li><a href="student-details.html">Student View</a></li>
-<li><a href="add-student.html">Student Add</a></li>
-<li><a href="edit-student.html">Student Edit</a></li>
+<li><a href="index.php">Admin Dashboard</a></li>
+<li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
+<li><a href="student-dashboard.php">Student Dashboard</a></li>
 </ul>
 </li>
 <li class="submenu active">
+<a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
+<ul>
+<li><a href="students.php">Student List</a></li>
+<li><a href="student-details.php" class="active">Student View</a></li>
+<li><a href="add-student.php">Student Add</a></li>
+<li><a href="edit-student.php">Student Edit</a></li>
+</ul>
+</li>
+<li class="submenu">
 <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="teachers.html">Teacher List</a></li>
-<li><a href="teacher-details.html">Teacher View</a></li>
-<li><a href="add-teacher.html" class="active">Teacher Add</a></li>
-<li><a href="edit-teacher.html">Teacher Edit</a></li>
+<li><a href="teachers.php">Teacher List</a></li>
+<li><a href="teacher-details.php">Teacher View</a></li>
+<li><a href="add-teacher.php">Teacher Add</a></li>
+<li><a href="edit-teacher.php">Teacher Edit</a></li>
 </ul>
+</li>
 
 <li class="submenu">
 <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="subjects.html">Subject List</a></li>
-<li><a href="add-subject.html">Subject Add</a></li>
-<li><a href="edit-subject.html">Subject Edit</a></li>
+<li><a href="subjects.php">Subject List</a></li>
+<li><a href="add-subject.php">Subject Add</a></li>
+<li><a href="edit-subject.php">Subject Edit</a></li>
 </ul>
 </li>
 
 <li class="submenu">
 <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="login.html">Login</a></li>
-<li><a href="register.html">Register</a></li>
-<li><a href="forgot-password.html">Forgot Password</a></li>
-<li><a href="error-404.html">Error Page</a></li>
+<li><a href="login.php">Login</a></li>
+<li><a href="register.php">Register</a></li>
+<li><a href="forgot-password.php">Forgot Password</a></li>
+<li><a href="error-404.php">Error Page</a></li>
 </ul>
 </li>
 
@@ -209,83 +212,152 @@
 
 <div class="page-wrapper">
 <div class="content container-fluid">
-
 <div class="page-header">
-<div class="row align-items-center">
-<div class="col">
-<h3 class="page-title">Add Teachers</h3>
+<div class="row">
+<div class="col-sm-12">
+<h3 class="page-title">Student Details</h3>
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="teachers.html">Teachers</a></li>
-<li class="breadcrumb-item active">Add Teachers</li>
+<li class="breadcrumb-item"><a href="students.php">Student</a></li>
+<li class="breadcrumb-item active">Student Details</li>
 </ul>
 </div>
 </div>
 </div>
-
-<div class="row">
-<div class="col-sm-12">
 <div class="card">
 <div class="card-body">
-<form>
 <div class="row">
-<div class="col-12">
-<h5 class="form-title"><span>Basic Details</span></h5>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Teacher ID</label>
-<input type="text" class="form-control">
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Name</label>
-<input type="text" class="form-control">
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Gender</label>
-<select class="form-control">
-<option>Male</option>
-<option>Female</option>
-<option>Others</option>
-</select>
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Date of Birth</label>
-<input type="date" class="form-control">
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Mobile</label>
-<input type="text" class="form-control">
+<div class="col-md-12">
+<div class="about-info">
+<h4>About Me</h4>
+<div class="media mt-3">
+<img src="assets/img/user.jpg" class="mr-3" alt="...">
+<div class="media-body">
+<ul>
+<li>
+<span class="title-span">Full Name : </span>
+<span class="info-span">Daisy Parks</span>
+</li>
+<li>
+<span class="title-span">Department : </span>
+<span class="info-span">Computer Science</span>
+</li>
+<li>
+<span class="title-span">Mobile : </span>
+<span class="info-span">+91 89657 48512</span>
+</li>
+<li>
+<span class="title-span">Email : </span>
+<span class="info-span"><a href="https://preschool.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7216131b010b32151f131b1e5c111d1f">[email&#160;protected]</a></span>
+</li>
+<li>
+<span class="title-span">Gender : </span>
+<span class="info-span">Male</span>
+</li>
+<li>
+<span class="title-span">DOB : </span>
+<span class="info-span">22 Apr 1995</span>
+</li>
+</ul>
 </div>
 </div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Joining Date</label>
-<input type="date" class="form-control">
+<div class="row mt-3">
+<div class="col-md-12">
+<p>Hello I am Daisy Parks. Lorem Ipsum is simply dummy text of the printing and typesetting industry, simply dummy text of the printing and typesetting industry.</p>
 </div>
 </div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Qualification</label>
-<input class="form-control" type="text">
+<div class="row follow-sec">
+<div class="col-md-4 mb-3">
+<div class="blue-box">
+<h3>2850</h3>
+<p>Followers</p>
 </div>
 </div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Experience</label>
-<input class="form-control" type="text">
+<div class="col-md-4 mb-3">
+<div class="blue-box">
+<h3>2050</h3>
+<p>Following</p>
 </div>
 </div>
-<div class="col-12">
-<h5 class="form-title"><span>Login Details</span></h5>
+<div class="col-md-4 mb-3">
+<div class="blue-box">
+<h3>2950</h3>
+<p>Friends</p>
 </div>
+</div>
+</div>
+<div class="row mt-2">
+<div class="col-md-12">
+<h5>Permanent Address</h5>
+<p>480, Estern Avenue, Courtage area, New York</p>
+</div>
+</div>
+<div class="row mt-2">
+<div class="col-md-12">
+<h5>Present Address</h5>
+<p>480, Estern Avenue, Courtage area, New York</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row mt-2">
+<div class="col-md-12">
+<div class="skill-info">
+<h4>Skills</h4>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry, simply dummy text of the printing and typesetting industry</p>
+<ul>
+<li>
+<label>Lorem Ipsum is simply</label>
+<div class="progress">
+<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+</div>
+</li>
+<li>
+<label>Lorem Ipsum is simply</label>
+<div class="progress">
+<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100" style="width: 69%"></div>
+</div>
+</li>
+<li>
+<label>Lorem Ipsum is simply</label>
+<div class="progress">
+<div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%"></div>
+</div>
+</li>
+<li>
+ <label>Lorem Ipsum is simply</label>
+<div class="progress">
+<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%"></div>
+</div>
+</li>
+</ul>
+<div class="row mt-3">
+<div class="col-md-12">
+<h5>Education</h5>
+<p class="mt-3">Secondary Schooling at xyz school of secondary education, Mumbai.</p>
+<p>Higher Secondary Schooling at xyz school of higher secondary education, Mumbai.</p>
+<p>Bachelor of Science at Abc College of Art and Science, Chennai.</p>
+<p>Master of Science at Cdm College of Engineering and Technology, Pune.</p>
+</div>
+</div>
+<div class="row mt-3">
+<div class="col-md-12">
+<h5>Certificates</h5>
+<p class="mt-3">1st Prise in Running Competition.</p>
+<p>Lorem Ipsum is simply dummy text.</p>
+<p>Won overall star student in higher secondary education.</p>
+<p>Lorem Ipsum is simply dummy text.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row mt-2">
+<div class="col-md-12">
+<div class="skill-info">
+<h4>Settings</h4>
+<form>
+<div class="row mt-3">
 <div class="col-12 col-sm-6">
 <div class="form-group">
 <label>Username</label>
@@ -294,53 +366,14 @@
 </div>
 <div class="col-12 col-sm-6">
 <div class="form-group">
-<label>Email ID</label>
-<input type="email" class="form-control">
+<label>Current Password</label>
+<input type="password" class="form-control">
 </div>
 </div>
 <div class="col-12 col-sm-6">
 <div class="form-group">
-<label>Password</label>
-<input type="text" class="form-control">
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Repeat Password</label>
-<input type="text" class="form-control">
-</div>
-</div>
-<div class="col-12">
-<h5 class="form-title"><span>Address</span></h5>
-</div>
-<div class="col-12">
-<div class="form-group">
-<label>Address</label>
-<input type="text" class="form-control">
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>City</label>
-<input type="text" class="form-control">
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>State</label>
-<input type="text" class="form-control">
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Zip Code</label>
-<input type="text" class="form-control">
-</div>
-</div>
-<div class="col-12 col-sm-6">
-<div class="form-group">
-<label>Country</label>
-<input type="text" class="form-control">
+<label>New Password</label>
+<input type="password" class="form-control">
 </div>
 </div>
 <div class="col-12">
@@ -355,10 +388,16 @@
 </div>
 </div>
 
+<footer>
+<p>Copyright © 2020 Dreamguys.</p>
+</footer>
+
+</div>
+
 </div>
 
 
-<script src="assets/js/jquery-3.6.0.min.js"></script>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -368,5 +407,5 @@
 <script src="assets/js/script.js"></script>
 </body>
 
-<!-- Mirrored from preschool.dreamguystech.com/html-template/add-teacher.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
+<!-- Mirrored from preschool.dreamguystech.com/php-template/student-details.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 </html>
