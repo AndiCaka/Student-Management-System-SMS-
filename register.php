@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+require "config.php";
+?>
 <?php
 if(isset($_POST['register'])){
     $isAccountInDB = "select * from user 
