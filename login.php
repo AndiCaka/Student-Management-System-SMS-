@@ -1,3 +1,8 @@
+
+<?php
+require "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
    <!-- Mirrored from preschool.dreamguystech.com/html-template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:39 GMT -->
@@ -13,6 +18,77 @@
       <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
+
+      <?php
+   $formValues = [];
+
+if(isset($_POST['login'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Check if user exists
+    $sql = "select * from user where username= '".$username."'";
+    $result = mysqli_query($conn, $sql);
+    $user = mysqli_fetch_assoc($result);
+
+
+    $errors = [];
+    $formValues['username'] = $username;
+
+    if(!$user){
+        $errors['username'] = true;
+    }
+    else{
+        // check if password is OK
+        if($password != $user['password']){
+            $errors['password'] = true;
+        }else{
+            unset($user ['password']);
+            $_SESSION['user'] = $user ;
+            header("Location: index.php");
+        }
+    }
+}
+?>
+   <div class="main-wrapper login-body">
+      <div class="login-wrapper">
+         <div class="container">
+            <div class="loginbox">
+               <div class="login-left">
+                  <img class="img-fluid" src="assets/img/logo-white.png" alt="Logo">
+               </div>
+               <div class="login-right">
+                  <div class="login-right-wrap">
+                     <h1>Login</h1>
+                     <p method="POST" class="account-subtitle">Access to our dashboard</p>
+
+                        <form method="POST" class="col-md-6">
+                        <div class="form-group">
+                        <label for="username">Username</label>
+        <input 
+            type="text" 
+            class="form-control <?php print (isset($errors['username'])) ? 'is-invalid' : '' ?>" 
+            name="username" 
+            aria-describedby="username_validation" 
+            placeholder="Enter Username"
+            value="<?php print (isset($formValues['username'])) ? $formValues['username'] : '' ?>"
+        >
+        <div id="username_validation" class="invalid-feedback">Username not found!</div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+            type="password" 
+            class="form-control  <?php print (isset($errors['password'])) ? 'is-invalid' : '' ?>" 
+            name="password" 
+            placeholder="Enter Password" 
+            area_describedby="password_validation"
+        >
+        <div id="password_validation" class="invalid-feedback">Password does not match!</div>
+    </div>
+                           <div class="form-group">
+                           <button type="submit" class="btn btn-primary px-4" name="login">Login</button>
+
       <div class="main-wrapper login-body">
          <div class="login-wrapper">
             <div class="container">
@@ -33,6 +109,7 @@
                            </div>
                            <div class="form-group">
                               <button class="btn btn-primary btn-block" type="submit">Login</button>
+
                            </div>
                         </form>
                         <div class="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a></div>
