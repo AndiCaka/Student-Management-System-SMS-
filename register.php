@@ -22,40 +22,35 @@
 
 <?php
 if(isset($_POST['register'])){
-    $name = $_POST['name'];
-    $email = $_POST['email']
-    $password = $_POST['password'];
-    $copassword = $_POST['copassword'];
+    $isAccountInDB = "select * from user 
+    where username = '".$_POST['username']."' && password = '".$_POST['password']."'";
+    $isAccountQuery = mysqli_query($conn, $isAccountInDB);
+    
+    if(!($product = mysqli_fetch_assoc($isAccountQuery))){
+        $sql = "INSERT into user 
+        (name, surname, age, gender, username, password, role)
+        VALUES ('".$_POST['name']."', '".$_POST['surname']."', '".$_POST['age']."', '".$_POST['gender']."', '".$_POST['username']."' , '".$_POST['password']."','".$_POST['role']."')";
 
-    // Check if user exists
-    $sql = "select * from sms where name = '".$name."'";
-    $result = mysqli_query($conn, $sql);
-    $user = mysqli_fetch_assoc($result);
-
-    $errors = [];
-    $formValues['name'] = $name;
-
-    if(!$user){
-        $errors['name'] = true;
-    }
-    else{
-        // check if password is OK
-        if($password != $user['password']){
-            $errors['password'] = true;
+        $result = mysqli_query($conn, $sql);
+        if(!$result){
+            echo "An error occurred: ".mysqli_error();
         }else{
-            $role = $user['role'];
-            unset($user['password']);
-            $_SESSION['user'] = $user;
-            if($role == "admin"){
-                header("Location: .login.php");
-            }else{
-                header("Location: index.php");
-            }
-            
+            ?>
+                <div class="alert alert-success" role="alert">
+                <i class="bi bi-check2-all"></i>  <?php echo $_POST['name'] ?> added successfully!
+                </div>
+            <?php
+            header("Location: login.html");
         }
     }
+    else{
+        ?>
+            <div class="alert alert-danger" role="alert">
+            <i class="bi bi-exclamation-triangle-fill"></i>  <?php echo $_POST['name'] ?> already exist!
+            </div>
+        <?php
+    }
 }
-
 ?>
 
 <div class="main-wrapper login-body">
@@ -78,13 +73,19 @@ if(isset($_POST['register'])){
 <input class="form-control" type="text" placeholder="Surname">
 </div>
 <div class="form-group">
-<input class="form-control" type="text" placeholder="Email">
+<input class="form-control" type="text" placeholder="Gender">
+</div>
+<div class="form-group">
+<input class="form-control" type="text" placeholder="Age">
+</div>
+<div class="form-group">
+<input class="form-control" type="text" placeholder="Username">
 </div>
 <div class="form-group">
 <input class="form-control" type="text" placeholder="Password">
 </div>
 <div class="form-group">
-<input class="form-control" type="text" placeholder="Confirm Password">
+<input class="form-control" type="text" placeholder="Role">
 </div>
 <div class="form-group mb-0">
 <button class="btn btn-primary btn-block" type="submit">Register</button>
