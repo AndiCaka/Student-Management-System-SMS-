@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+require "config.php";
+?>
    <!-- Mirrored from preschool.dreamguystech.com/php-template/students.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:43 GMT -->
    <head>
       <meta charset="utf-8">
@@ -208,21 +211,51 @@
                   <div class="col-sm-12">
                      <div class="card card-table">
                         <div class="card-body">
+                        <form method="POST" class="col-md-60">
                            <div class="table-responsive">
                               <table class="table table-hover table-center mb-0 datatable">
                                  <thead>
                                     <tr>
                                        <th>ID</th>
                                        <th>Name</th>
-                                       <th>Class</th>
-                                       <th>DOB</th>
-                                       <th>Parent Name</th>
-                                       <th>Mobile Number</th>
-                                       <th>Address</th>
-                                       <th class="text-right">Action</th>
+                                       <th>Surname</th>
+                                       <th>Gender</th>
+                                       <th>Username</th>
+                                      
+                                       
+                                       <th class="text">Action</th>
                                     </tr>
                                  </thead>
                                  <tbody>
+                                 <?php  
+                                       $user = $_SESSION['user'];
+                                       $sql = "select * from user where role = 'student'";
+                                       $result = mysqli_query($conn, $sql);
+                                       if($result->num_rows > 0){
+                                             while($user = $result -> fetch_assoc()){
+                                    
+                                               
+                                           ?>
+                                    
+                                       <tr>
+                                             <td><?php  echo $user['id']; ?></td>
+                                             <td><a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-04.jpg" alt="User Image"></a><?php  echo $user['name']; ?></td>
+                                             <td><?php  echo $user['surname']; ?></td>
+                                             <td><?php  echo $user['gender']; ?></td>
+                                             <td><?php  echo $user['username']; ?></td>   
+                                             <td><div>
+                                             <a href="edit-student.php?id=<?php echo $user ['id'];?>" class="btn btn-sm bg-success-light mr-2">
+                                             <i class="fas fa-pen"></i>
+                                             </a>
+                                             <a href="students.php?id=<?ph echo $user ['id'];?>" class="btn btn-sm bg-danger-light">
+                                             <i class="fas fa-trash"></i>
+                                             </a>
+                                             </div></td>
+                                       </tr>
+                                    <?php  
+                                             }
+                                          }
+                                    ?>
                                     <tr>
                                        <td>PRE2209</td>
                                        <td>
@@ -248,248 +281,16 @@
                                        </td>
                                     </tr>
                                     <tr>
-                                       <td>PRE2213</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-03.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Malynne</a>
-                                          </h2>
-                                       </td>
-                                       <td>8 A</td>
-                                       <td>3 June 2010</td>
-                                       <td>Fields Malynne</td>
-                                       <td>242 362 3100</td>
-                                       <td>Bacardi Rd P.O. Box N-4880, New Providence</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE2143</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-02.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Levell Scott</a>
-                                          </h2>
-                                       </td>
-                                       <td>10 A</td>
-                                       <td>12 Apr 2002</td>
-                                       <td>Jeffrey Scott</td>
-                                       <td>026 7318 4366</td>
-                                       <td>P.O. Box: 41, Gaborone</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE2431</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-03.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Minnie</a>
-                                          </h2>
-                                       </td>
-                                       <td>11 C</td>
-                                       <td>24 Feb 2000</td>
-                                       <td>J Shaffer</td>
-                                       <td>952 512 4909</td>
-                                       <td>4771 Oral Lake Road, Golden Valley</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE1534</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-04.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Lois A</a>
-                                          </h2>
-                                       </td>
-                                       <td>10 A</td>
-                                       <td>22 Jul 2006</td>
-                                       <td>Cleary Wong</td>
-                                       <td>413 289 1314</td>
-                                       <td>2844 Leverton Cove Road, Palmer</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE2153</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-05.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Calvin</a>
-                                          </h2>
-                                       </td>
-                                       <td>9 B</td>
-                                       <td>8 Dec 2003</td>
-                                       <td>Minnie J Shaffer</td>
-                                       <td>701 753 3810</td>
-                                       <td>1900 Hidden Meadow Drive, Crete</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE1252</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-06.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Joe Kelley</a>
-                                          </h2>
-                                       </td>
-                                       <td>11 C</td>
-                                       <td>7 Oct 2000</td>
-                                       <td>Vincent Howard</td>
-                                       <td>402 221 7523</td>
-                                       <td>3979 Ashwood Drive, Omaha</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE1434</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-07.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Vincent</a>
-                                          </h2>
-                                       </td>
-                                       <td>10 A</td>
-                                       <td>4 Jan 2002</td>
-                                       <td>Kelley Joe</td>
-                                       <td>402 221 7523</td>
-                                       <td>3979 Ashwood Drive, Omaha</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE2345</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-08.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Kozma  Tatari</a>
-                                          </h2>
-                                       </td>
-                                       <td>9 A</td>
-                                       <td>1 Feb 2006</td>
-                                       <td>Lombardi</td>
-                                       <td>04 2239 968</td>
-                                       <td>Rruga E Kavajes, Condor Center, Tirana</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE2365</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-09.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">John Chambers</a>
-                                          </h2>
-                                       </td>
-                                       <td>11 B</td>
-                                       <td>13 Sept 2003</td>
-                                       <td>Wong Jeffrey</td>
-                                       <td>870 663 2334</td>
-                                       <td>4667 Sunset Drive, Pine Bluff</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>PRE1234</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-10.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Nathan Humphries</a>
-                                          </h2>
-                                       </td>
-                                       <td>10 B</td>
-                                       <td>26 Apr 1994</td>
-                                       <td>Stephen Marley</td>
-                                       <td>077 3499 9959</td>
-                                       <td>86 Lamphey Road, Thelnetham</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
+                                       
+                                    
                                  </tbody>
                               </table>
+                              <form>
                            </div>
+                              <?php
+                              
+                                 if(isset($_POST['role'])){}
+                                    ?>
                         </div>
                      </div>
                   </div>

@@ -19,45 +19,6 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<?php
-if(isset($_POST['register'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $copassword = $_POST['copassword'];
-
-    // Check if user exists
-    $sql = "select * from sms where name = '".$name."'";
-    $result = mysqli_query($conn, $sql);
-    $user = mysqli_fetch_assoc($result);
-
-    $errors = [];
-    $formValues['name'] = $name;
-
-    if(!$user){
-        $errors['name'] = true;
-    }
-    else{
-        // check if password is OK
-        if($password != $user['password']){
-            $errors['password'] = true;
-        }else{
-            $role = $user['role'];
-            unset($user['password']);
-            $_SESSION['user'] = $user;
-            if($role == "admin"){
-                header("Location: .login.php");
-            }else{
-                header("Location: index.php");
-            }
-            
-        }
-    }
-}
-
-?>
-
 <div class="main-wrapper login-body">
 <div class="login-wrapper">
 <div class="container">

@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '6sprq5F2', 'sms');
+$conn = mysqli_connect('localhost', 'root', '', 'sms');
 
 if(!$conn){
     echo "Error occurred!<br>".mysqli_error();
