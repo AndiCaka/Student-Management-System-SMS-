@@ -3,7 +3,8 @@
 <?php
 require "config.php";
 require "authentication.php";
-studentAccess();
+$user = $_SESSION['user'];
+$title = "Welcome ".$user['name']." ".$user['surname']."!";
 ?>
 
 <!-- Mirrored from preschool.dreamguystech.com/php-template/student-dashboard.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:43 GMT -->
@@ -222,7 +223,7 @@ studentAccess();
 <div class="page-header">
 <div class="row">
 <div class="col-sm-12">
-<h3 class="page-title">Welcome Bruklin!</h3>
+<h3 class="page-title"><?php echo $title ?></h3>
 <ul class="breadcrumb">
 <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
 <li class="breadcrumb-item active">Student Dashboard</li>
