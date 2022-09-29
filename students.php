@@ -262,7 +262,7 @@ require "config.php";
                                     
                                  </tbody>
                               </table>
-                              <form>
+                           </form>
                            </div>
                               <?php
                               

@@ -234,69 +234,73 @@
 </div>
 
 <div class="row">
-<div class="col-sm-12">
-<div class="card card-table">
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-hover table-center mb-0 datatable">
-<thead>
-<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Surname</th>
-<th>Username</th>
-<th>Password</th>
-<th>Gender</th>
-<th>Role</th>
+    <div class="col-sm-12">
+        <div class="card card-table">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-center mb-0 datatable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Surname</th>
+                                <th>Username</th>
+                                <th>Password</th>
+                                <th>Gender</th>
+                                <th>Role</th>
+                                <th class="text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $conn = mysqli_connect('localhost', 'root', '', 'sms');
 
+                                $sql = "SELECT * FROM user Where role = 'teacher'";
 
-<th class="text-right">Action</th>
-<?php
-$conn = mysqli_connect('localhost', 'root', '', 'sms');
+                                $result = $conn->query($sql);
 
-$sql = "SELECT * FROM user Where role = 'teacher'";
-
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    while ($row = $result -> fetch_assoc()) {
-        ?>
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result -> fetch_assoc()) {
+                            ?>
         
-        <tr>
-            <td> <?php echo $row['id']; ?></td>
-            <td> <?php echo $row['name']; ?></td>
-            <td> <?php echo $row['surname']; ?></td>
-            <td> <?php echo $row['username']; ?></td>
-            <td> <?php echo $row['password']; ?></td>
-            <td> <?php echo $row['gender']; ?></td>
-            <td> <?php echo $row['role']; ?></td>
-            
-            <td class="text-right">
-            <div class="actions">
-               <a href="update.php?id= <?php echo $row['id']?> " class="btn btn-sm bg-success-light mr-2">
-               <i class="fas fa-pen"></i>
-               </a>
-               <a  href="table.php?id= <?php echo $row['id']?> " class="btn btn-sm bg-danger-light">
-               <i class="fas fa-trash"></i>
-               </a>
+                            <tr>
+                                <td> <?php echo $row['id']; ?></td>
+                                <td> <?php echo $row['name']; ?></td>
+                                <td> <?php echo $row['surname']; ?></td>
+                                <td> <?php echo $row['username']; ?></td>
+                                <td> <?php echo $row['password']; ?></td>
+                                <td> <?php echo $row['gender']; ?></td>
+                                <td> <?php echo $row['role']; ?></td>
+                                
+                                <td class="text-right">
+                                    <div class="actions">
+                                    <a href="update.php?id= <?php echo $row['id']?> " class="btn btn-sm bg-success-light mr-2">
+                                    <i class="fas fa-pen"></i>
+                                    </a>
+                                    <a  href="table.php?id= <?php echo $row['id']?> " class="btn btn-sm bg-danger-light">
+                                    <i class="fas fa-trash"></i>
+                                    </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <?php 
+                                }
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                    </div>
+                  </div>
+               </div>
             </div>
-         </td>
-            
-        </tr>
-        <?php 
-    }
-}
-?>
-
-<footer>
-<p>Copyright © 2020 Dreamguys.</p>
-</footer>
-
-</div>
-
-</div>
-
-
+            </div>
+            </div>
+            <footer>
+               <p>Copyright © 2020 Dreamguys.</p>
+            </footer>
+         </div>
+      </div>
+        
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 
 <script src="assets/js/popper.min.js"></script>
@@ -307,6 +311,9 @@ if ($result->num_rows > 0) {
 <script src="assets/plugins/datatables/datatables.min.js"></script>
 
 <script src="assets/js/script.js"></script>
+
+
+
 </body>
 
 <!-- Mirrored from preschool.dreamguystech.com/php-template/teachers.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
