@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-<title>Preskool - Forgot Password</title>
+<title>Preskool - Register</title>
 
 <link rel="shortcut icon" href="assets/img/favicon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
@@ -40,7 +40,7 @@ if(isset($_POST['register'])){
                 <i class="bi bi-check2-all"></i>  <?php echo $_POST['name'] ?> added successfully!
                 </div>
             <?php
-            header("Location: login.php");
+            header("Location: index.php");
         }
     }
     else{
@@ -62,10 +62,9 @@ if(isset($_POST['register'])){
 </div>
 <div class="login-right">
 <div class="login-right-wrap">
-<h1>Forgot Password?</h1>
-<p class="account-subtitle">Enter your email to get a password reset link</p>
+<h1>Register</h1>
 
-<form action="https://preschool.dreamguystech.com/php-template/login.php">
+<form action="https://preschool.dreamguystech.com/php-template/index.php">
 <div class="form-group">
 <input class="form-control" type="text" placeholder="Name">
 </div>
@@ -89,11 +88,10 @@ if(isset($_POST['register'])){
 </div>
 
 <div class="form-group mb-0">
-<button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+<button class="btn btn-primary btn-block" type="submit">Register</button>
 </div>
 </form>
 
-<div class="text-center dont-have">Remember your password? <a href="login.php">Login</a></div>
 </div>
 </div>
 </div>

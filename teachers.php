@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -242,274 +243,44 @@
 <tr>
 <th>ID</th>
 <th>Name</th>
-<th>Class</th>
+<th>Surname</th>
+<th>Username</th>
+<th>Password</th>
 <th>Gender</th>
-<th>Subject</th>
-<th>Section</th>
-<th>Mobile Number</th>
-<th>Address</th>
+<th>Role</th>
+
+
 <th class="text-right">Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PRE2209</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-02.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Aaliyah</a>
-</h2>
-</td>
-<td>10</td>
-<td>Female</td>
-<td>Mathematics</td>
-<td>A</td>
-<td>097 3584 5870</td>
-<td>911 Deer Ridge Drive,USA</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE2213</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-03.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Malynne</a>
-</h2>
-</td>
-<td>8</td>
-<td>Female</td>
-<td>Physics</td>
-<td>A</td>
-<td>242 362 3100</td>
-<td>Bacardi Rd P.O. Box N-4880, New Providence</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE2143</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-04.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Levell Scott</a>
-</h2>
-</td>
-<td>10</td>
-<td>Male</td>
-<td>Science</td>
-<td>B</td>
-<td>026 7318 4366</td>
-<td>P.O. Box: 41, Gaborone</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE2431</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-05.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Minnie</a>
-</h2>
-</td>
-<td>11</td>
-<td>Male</td>
-<td>History</td>
-<td>C</td>
-<td>952 512 4909</td>
-<td>4771 Oral Lake Road, Golden Valley</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE1534</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-06.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Lois A</a>
-</h2>
-</td>
-<td>10</td>
-<td>Female</td>
-<td>English</td>
-<td>B</td>
-<td>413 289 1314</td>
-<td>2844 Leverton Cove Road, Palmer</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE2153</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-07.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Calvin</a>
-</h2>
-</td>
-<td>9</td>
-<td>Male</td>
-<td>Mathematics</td>
-<td>C</td>
-<td>701 753 3810</td>
-<td>1900 Hidden Meadow Drive, Crete</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE1434</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-08.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Vincent</a>
-</h2>
-</td>
-<td>10</td>
-<td>Male</td>
-<td>Mathematics</td>
-<td>C</td>
-<td>402 221 7523</td>
-<td>3979 Ashwood Drive, Omaha</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE2345</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-09.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Kozma  Tatari</a>
-</h2>
-</td>
-<td>9</td>
-<td>Female</td>
-<td>Science</td>
-<td>A</td>
-<td>04 2239 968</td>
-<td>Rruga E Kavajes, Condor Center, Tirana</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE2365</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-10.jpg" alt="User Image"></a>
-<a href="teacher-details.php">John Chambers</a>
-</h2>
-</td>
-<td>11</td>
-<td>Male</td>
-<td>Botony</td>
-<td>B</td>
-<td>870 663 2334</td>
-<td>4667 Sunset Drive, Pine Bluff</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-<tr>
-<td>PRE1234</td>
-<td>
-<h2 class="table-avatar">
-<a href="teacher-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-11.jpg" alt="User Image"></a>
-<a href="teacher-details.php">Nathan Humphries</a>
-</h2>
-</td>
-<td>10</td>
-<td>Male</td>
-<td>Biology</td>
-<td>A</td>
-<td>077 3499 9959</td>
-<td>86 Lamphey Road, Thelnetham</td>
-<td class="text-right">
-<div class="actions">
-<a href="edit-teacher.php" class="btn btn-sm bg-success-light mr-2">
-<i class="fas fa-pen"></i>
-</a>
-<a href="#" class="btn btn-sm bg-danger-light">
-<i class="fas fa-trash"></i>
-</a>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<?php
+$conn = mysqli_connect('localhost', 'root', '', 'sms');
+
+$sql = "SELECT * FROM user Where role = 'teacher'";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result -> fetch_assoc()) {
+        ?>
+        
+        <tr>
+            <td> <?php echo $row['id']; ?></td>
+            <td> <?php echo $row['name']; ?></td>
+            <td> <?php echo $row['surname']; ?></td>
+            <td> <?php echo $row['username']; ?></td>
+            <td> <?php echo $row['password']; ?></td>
+            <td> <?php echo $row['gender']; ?></td>
+            <td> <?php echo $row['role']; ?></td>
+            <td class="buttons">
+                <a id="editBut" href="update.php?id= <?php echo $row['id']?> " class="btn btn-outline-success btn-sm"> Edit </a>
+                <a id="deleteBut" href="table.php?id= <?php echo $row['id']?> " class="btn btn-outline-danger btn-sm"> Delete </a>
+
+            </td>
+            
+        </tr>
+        <?php 
+    }
+}
+?>
 
 <footer>
 <p>Copyright © 2020 Dreamguys.</p>
