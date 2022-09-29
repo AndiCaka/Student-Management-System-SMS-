@@ -1,23 +1,29 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <?php
 require "config.php";
+require "authentication.php";
+adminAccess();
+$user = $_SESSION['user'];
+$title = "Welcome ".$user['name']." ".$user['surname'];
 ?>
-   <!-- Mirrored from preschool.dreamguystech.com/php-template/students.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:43 GMT -->
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-      <title>Preskool - Students</title>
+      <title>Preskool - Dashboard</title>
       <link rel="shortcut icon" href="assets/img/favicon.png">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
       <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
       <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-      <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
       <link rel="stylesheet" href="assets/css/style.css">
    </head>
    <body>
       <div class="main-wrapper">
+
+          <!-- nav -->
          <div class="header">
             <div class="header-left">
                <a href="index.php" class="logo">
@@ -131,6 +137,10 @@ require "config.php";
                </li>
             </ul>
          </div>
+
+
+
+         <!-- body -->
          <div class="sidebar" id="sidebar">
             <div class="sidebar-inner slimscroll">
                <div id="sidebar-menu" class="sidebar-menu">
@@ -138,21 +148,21 @@ require "config.php";
                      <li class="menu-title">
                         <span>Main Menu</span>
                      </li>
-                     <li class="submenu">
+                     <li class="submenu active">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="index.php">Admin Dashboard</a></li>
+                           <li><a href="index.php" class="active">Admin Dashboard</a></li>
                            <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
                            <li><a href="student-dashboard.php">Student Dashboard</a></li>
                         </ul>
                      </li>
-                     <li class="submenu active">
+                     <li class="submenu">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="students.php" class="active">Student List</a></li>
+                           <li><a href="students.php">Student List</a></li>
                            <li><a href="student-details.php">Student View</a></li>
                            <li><a href="add-student.php">Student Add</a></li>
-                           
+                           <li><a href="edit-student.php">Student Edit</a></li>
                         </ul>
                      </li>
                      <li class="submenu">
@@ -164,7 +174,6 @@ require "config.php";
                            <li><a href="edit-teacher.php">Teacher Edit</a></li>
                         </ul>
                      </li>
-                     
                      <li class="submenu">
                         <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
                         <ul>
@@ -173,6 +182,7 @@ require "config.php";
                            <li><a href="edit-subject.php">Subject Edit</a></li>
                         </ul>
                      </li>
+                     
                      
                      <li class="submenu">
                         <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
@@ -184,8 +194,11 @@ require "config.php";
                         </ul>
                      </li>
                      
-                        </ul>
-                     </li>
+                     
+                     
+                     
+      
+                     
                   </ul>
                </div>
             </div>
@@ -193,78 +206,217 @@ require "config.php";
          <div class="page-wrapper">
             <div class="content container-fluid">
                <div class="page-header">
-                  <div class="row align-items-center">
-                     <div class="col">
-                        <h3 class="page-title">Students</h3>
+                  <div class="row">
+                     <div class="col-sm-12">
+                        <h3 class="page-title"><?php echo $title ?></h3>
                         <ul class="breadcrumb">
-                           <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                           <li class="breadcrumb-item active">Students</li>
+                           <li class="breadcrumb-item active">Dashboard</li>
                         </ul>
-                     </div>
-                     <div class="col-auto text-right float-right ml-auto">
-                        <a href="#" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i> Download</a>
-                        <a href="add-student.php" class="btn btn-primary"><i class="fas fa-plus"></i></a>
                      </div>
                   </div>
                </div>
                <div class="row">
-                  <div class="col-sm-12">
-                     <div class="card card-table">
+                  <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                     <div class="card bg-one w-100">
                         <div class="card-body">
-                        <form method="POST" class="col-md-60">
+                           <div class="db-widgets d-flex justify-content-between align-items-center">
+                              <div class="db-icon">
+                                 <i class="fas fa-user-graduate"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>50055</h3>
+                                 <h6>Students</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                     <div class="card bg-two w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-between align-items-center">
+                              <div class="db-icon">
+                                 <i class="fas fa-crown"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>50+</h3>
+                                 <h6>Awards</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                     <div class="card bg-three w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-between align-items-center">
+                              <div class="db-icon">
+                                 <i class="fas fa-building"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>30+</h3>
+                                 <h6>Department</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                     <div class="card bg-four w-100">
+                        <div class="card-body">
+                           <div class="db-widgets d-flex justify-content-between align-items-center">
+                              <div class="db-icon">
+                                 <i class="fas fa-file-invoice-dollar"></i>
+                              </div>
+                              <div class="db-info">
+                                 <h3>$505</h3>
+                                 <h6>Revenue</h6>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="row">
+                  <div class="col-md-6 d-flex">
+                     <div class="card flex-fill">
+                        <div class="card-header">
+                           <h5 class="card-title">Star Students</h5>
+                        </div>
+                        <div class="card-body">
                            <div class="table-responsive">
-                              <table class="table table-hover table-center mb-0 datatable">
-                                 <thead>
+                              <table class="table table-hover table-center">
+                                 <thead class="thead-light">
                                     <tr>
                                        <th>ID</th>
                                        <th>Name</th>
-                                       <th>Surname</th>
-                                       <th>Gender</th>
-                                       <th>Username</th>
-                                      
-                                       
-                                       <th class="text">Action</th>
+                                       <th class="text-center">Marks</th>
+                                       <th class="text-center">Percentage</th>
+                                       <th class="text-right">Year</th>
                                     </tr>
                                  </thead>
                                  <tbody>
-                                 <?php  
-                                       $user = $_SESSION['user'];
-                                       $sql = "select * from user where role = 'student'";
-                                       $result = mysqli_query($conn, $sql);
-                                       if($result->num_rows > 0){
-                                             while($user = $result -> fetch_assoc()){
-                           
-                                       
-                                    ?>
-                           
-                              <tr>
-                                    <td><?php  echo $user['id']; ?></td>
-                                    <td><a href="student-details.php" ></a><?php  echo $user['name']; ?></td>
-                                    <td><?php  echo $user['surname']; ?></td>
-                                    <td><?php  echo $user['gender']; ?></td>
-                                    <td><?php  echo $user['username']; ?></td>   
-                                    <td><div>
-                                    <a href="edit-student.php?id=<?php echo $user ['id'];?>" class="btn btn-sm bg-success-light mr-2">
-                                    <i class="fas fa-pen"></i>
-                                    </a>
-                                    <a href="students.php?id=<?php echo $user['id'];?>" class="btn btn-sm bg-danger-light" onClick="return confirm('Do you really want to delete');">
-                                    <i class="fa fa-trash" ></i></a>
-                                   
-                                    </div></td>
-                              </tr>
-                           <?php  
-                                    }
-                                 }
-                           ?>
-                           
-                           
-                                       
-                                    
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE2209</div>
+                                       </td>
+                                       <td class="text-nowrap">John Smith</td>
+                                       <td class="text-center">1185</td>
+                                       <td class="text-center">98%</td>
+                                       <td class="text-right">
+                                          <div>2019</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE1245</div>
+                                       </td>
+                                       <td class="text-nowrap">Jolie Hoskins</td>
+                                       <td class="text-center">1195</td>
+                                       <td class="text-center">99.5%</td>
+                                       <td class="text-right">
+                                          <div>2018</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE1625</div>
+                                       </td>
+                                       <td class="text-nowrap">Pennington Joy</td>
+                                       <td class="text-center">1196</td>
+                                       <td class="text-center">99.6%</td>
+                                       <td class="text-right">
+                                          <div>2017</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE2516</div>
+                                       </td>
+                                       <td class="text-nowrap">Millie Marsden</td>
+                                       <td class="text-center">1187</td>
+                                       <td class="text-center">98.2%</td>
+                                       <td class="text-right">
+                                          <div>2016</div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td class="text-nowrap">
+                                          <div>PRE2209</div>
+                                       </td>
+                                       <td class="text-nowrap">John Smith</td>
+                                       <td class="text-center">1185</td>
+                                       <td class="text-center">98%</td>
+                                       <td class="text-right">
+                                          <div>2015</div>
+                                       </td>
+                                    </tr>
                                  </tbody>
                               </table>
-                           </form>
                            </div>
                         </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 d-flex">
+                     <div class="card flex-fill">
+                        <div class="card-header">
+                           <h5 class="card-title">Student Activity</h5>
+                        </div>
+                        <div class="card-body">
+                           <ul class="activity-feed">
+                              <li class="feed-item">
+                                 <div class="feed-date">Apr 13</div>
+                                 <span class="feed-text"><a>John Doe</a> won 1st place in <a>"Chess"</a></span>
+                              </li>
+                              <li class="feed-item">
+                                 <div class="feed-date">Mar 21</div>
+                                 <span class="feed-text"><a>Justin Lee</a> participated in <a href="invoice.php">"Carrom"</a></span>
+                              </li>
+                              <li class="feed-item">
+                                 <div class="feed-date">Feb 2</div>
+                                 <span class="feed-text"><a>Justin Lee</a>attended internation conference in <a href="profile.php">"St.John School"</a></span>
+                              </li>
+                              <li class="feed-item">
+                                 <div class="feed-date">Apr 13</div>
+                                 <span class="feed-text"><a>John Doe</a> won 1st place in <a>"Chess"</a></span>
+                              </li>
+                              <li class="feed-item">
+                                 <div class="feed-date">Mar 21</div>
+                                 <span class="feed-text"><a>Justin Lee</a> participated in <a href="invoice.php">"Carrom"</a></span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-xl-3 col-sm-6 col-12">
+                     <div class="card flex-fill fb sm-box">
+                        <i class="fab fa-facebook"></i>
+                        <h6>50,095</h6>
+                        <p>Likes</p>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 col-12">
+                     <div class="card flex-fill twitter sm-box">
+                        <i class="fab fa-twitter"></i>
+                        <h6>48,596</h6>
+                        <p>Follows</p>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 col-12">
+                     <div class="card flex-fill insta sm-box">
+                        <i class="fab fa-instagram"></i>
+                        <h6>52,085</h6>
+                        <p>Follows</p>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-sm-6 col-12">
+                     <div class="card flex-fill linkedin sm-box">
+                        <i class="fab fa-linkedin-in"></i>
+                        <h6>69,050</h6>
+                        <p>Follows</p>
                      </div>
                   </div>
                </div>
@@ -278,8 +430,9 @@ require "config.php";
       <script src="assets/js/popper.min.js"></script>
       <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
       <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-      <script src="assets/plugins/datatables/datatables.min.js"></script>
+      <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
+      <script src="assets/plugins/apexchart/chart-data.js"></script>
       <script src="assets/js/script.js"></script>
    </body>
-   <!-- Mirrored from preschool.dreamguystech.com/php-template/students.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:49 GMT -->
+   
 </html>

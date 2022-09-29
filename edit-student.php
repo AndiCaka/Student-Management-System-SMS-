@@ -61,6 +61,19 @@
                         <input type="text" class="form-control" placeholder="Search here">
                         <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                      </form>
+                  <div class="dropdown-menu">
+                     <div class="user-header">
+                        <div class="avatar avatar-sm">
+                           <img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+                        </div>
+                        <div class="user-text">
+                           <h6>Ryan Taylor</h6>
+                           <p class="text-muted mb-0">Administrator</p>
+                        </div>
+                     </div>
+                     <a class="dropdown-item" href="profile.php">My Profile</a>
+                     <a class="dropdown-item" href="inbox.php">Inbox</a>
+                     <a class="dropdown-item" href="log_out.php">Logout</a>
                   </div>
                   <a class="mobile_btn" id="mobile_btn">
                      <i class="fas fa-bars"></i>

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <php html="en">
+<?php
+require "config.php";
+require "authentication.php";
+studentAccess();
+?>
 
 <!-- Mirrored from preschool.dreamguystech.com/php-template/student-dashboard.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:43 GMT -->
 <head>
@@ -141,7 +146,7 @@
 </div>
 <a class="dropdown-item" href="profile.php">My Profile</a>
 <a class="dropdown-item" href="inbox.php">Inbox</a>
-<a class="dropdown-item" href="login.php">Logout</a>
+<a class="dropdown-item" href="log_out.php">Logout</a>
 </div>
 </li>
 
@@ -174,7 +179,7 @@
 
 </ul>
 </li>
-<li class="submenu">
+<!-- <li class="submenu">
 <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
 <ul>
 <li><a href="teachers.php">Teacher List</a></li>
@@ -182,16 +187,16 @@
 <li><a href="add-teacher.php">Teacher Add</a></li>
 <li><a href="edit-teacher.php">Teacher Edit</a></li>
 </ul>
-</li>
+</li> -->
 
-<li class="submenu">
+<!-- <li class="submenu">
 <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
 <ul>
 <li><a href="subjects.php">Subject List</a></li>
 <li><a href="add-subject.php">Subject Add</a></li>
 <li><a href="edit-subject.php">Subject Edit</a></li>
 </ul>
-</li>
+</li> -->
 
 <li class="submenu">
 <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
