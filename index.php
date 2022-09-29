@@ -154,7 +154,7 @@ require "config.php";
                            <li><a href="student-dashboard.php">Student Dashboard</a></li>
                         </ul>
                      </li>
-                     <li class="submenu">
+                     <!-- <li class="submenu">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
                         <ul>
                            <li><a href="students.php">Student List</a></li>
@@ -180,7 +180,7 @@ require "config.php";
                            <li><a href="edit-subject.php">Subject Edit</a></li>
                         </ul>
                      </li>
-                     
+                      -->
                      
                      <li class="submenu">
                         <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
