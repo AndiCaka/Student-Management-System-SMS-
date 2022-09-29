@@ -86,18 +86,13 @@ if(isset($_POST['register'])){
 <div class="login-right">
 <div class="login-right-wrap">
 <h1>Register</h1>
-<<<<<<< HEAD
 
-<form action="https://preschool.dreamguystech.com/php-template/index.php">
-<div class="form-group">
-<input class="form-control" type="text" placeholder="Name">
-=======
 <p class="account-subtitle">Access to our dashboard</p>
 
 <form method="POST" >
     <div class="form-group">
 <input class="form-control" type="text" name="name" placeholder="Name">
->>>>>>> fda8404cf94b250d49233da8dcb7b125a6edb697
+
 </div>
 <div class="form-group">
 <input class="form-control" type="text" name="surname" placeholder="Surname">
@@ -115,12 +110,7 @@ if(isset($_POST['register'])){
 <input class="form-control" type="text" name="role" placeholder="Role">
 </div>
 <div class="form-group mb-0">
-<<<<<<< HEAD
-<button class="btn btn-primary btn-block" type="submit">Register</button>
-</div>
-</form>
 
-=======
 <button class="btn btn-primary btn-block" name="register" type="submit">Register</button>
 </div>
 </form>
@@ -136,7 +126,6 @@ if(isset($_POST['register'])){
 </div>
 
 <div class="text-center dont-have">Already have an account? <a href="login.php">Login</a></div>
->>>>>>> fda8404cf94b250d49233da8dcb7b125a6edb697
 </div>
 </div>
 </div>
