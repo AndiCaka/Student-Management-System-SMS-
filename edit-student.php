@@ -324,31 +324,31 @@
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Mother's Occupation</label>
-                                       <input type="text" class="form-control" value="Home Maker">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Mother's Mobile</label>
-                                       <input type="text" class="form-control" value="026 7318 4366">
+                                       <input type="text" class="form-control">
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Mother's Email</label>
-                                       <input type="email" class="form-control" value="clearywong@gmail.com">
+                                       <input type="email" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Present Address</label>
-                                       <textarea class="form-control">86 Lamphey Road, Thelnetham</textarea>
+                                       <textarea class="form-control"></textarea>
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Permanent Address</label>
-                                       <textarea class="form-control">86 Lamphey Road, Thelnetham</textarea>
+                                       <textarea class="form-control"></textarea>
                                     </div>
                                  </div>
                                  <div class="col-12">
