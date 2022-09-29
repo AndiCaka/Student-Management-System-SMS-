@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Mirrored from preschool.dreamguystech.com/php-template/forgot-password.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>Preskool - Register</title>
+
+<link rel="shortcut icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
 <?php
 require "config.php";
 ?>
@@ -23,7 +42,7 @@ if(isset($_POST['register'])){
                 <i class="bi bi-check2-all"></i>  <?php echo $_POST['name'] ?> added successfully!
                 </div>
             <?php
-            header("Location: login.php");
+            header("Location: index.php");
         }
     }
     else{
@@ -64,11 +83,13 @@ if(isset($_POST['register'])){
 <div class="login-right">
 <div class="login-right-wrap">
 <h1>Register</h1>
+
 <p class="account-subtitle">Access to our dashboard</p>
 
 <form method="POST" >
     <div class="form-group">
 <input class="form-control" type="text" name="name" placeholder="Name">
+
 </div>
 <div class="form-group">
 <input class="form-control" type="text" name="surname" placeholder="Surname">
@@ -97,6 +118,7 @@ if(isset($_POST['register'])){
 
 </div>
 <div class="form-group mb-0">
+
 <button class="btn btn-primary btn-block" name="register" type="submit">Register</button>
 </div>
 </form>
