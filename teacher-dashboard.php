@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+require "config.php";
 
+require "authentication.php";
+teacherAccess();
+?>
 <!-- Mirrored from preschool.dreamguystech.com/php-template/teacher-dashboard.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:40 GMT -->
 <head>
 <meta charset="utf-8">
@@ -141,7 +146,7 @@
 </div>
 <a class="dropdown-item" href="profile.php">My Profile</a>
 <a class="dropdown-item" href="inbox.php">Inbox</a>
-<a class="dropdown-item" href="login.php">Logout</a>
+<a class="dropdown-item" href="log_out.php">Logout</a>
 </div>
 </li>
 
@@ -165,7 +170,7 @@
 <li><a href="student-dashboard.php">Student Dashboard</a></li>
 </ul>
 </li>
-<li class="submenu">
+<!-- <li class="submenu">
 <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
 <ul>
 <li><a href="students.php">Student List</a></li>
@@ -173,7 +178,7 @@
 <li><a href="add-student.php">Student Add</a></li>
 <li><a href="edit-student.php">Student Edit</a></li>
 </ul>
-</li>
+</li> -->
 <li class="submenu">
 <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
 <ul>

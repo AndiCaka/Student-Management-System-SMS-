@@ -122,7 +122,7 @@
                      </div>
                      <a class="dropdown-item" href="profile.php">My Profile</a>
                      <a class="dropdown-item" href="inbox.php">Inbox</a>
-                     <a class="dropdown-item" href="login.php">Logout</a>
+                     <a class="dropdown-item" href="log_out.php">Logout</a>
                   </div>
                </li>
             </ul>

@@ -43,9 +43,22 @@ if(isset($_POST['login'])){
         if($password != $user['password']){
             $errors['password'] = true;
         }else{
-            unset($user ['password']);
-            $_SESSION['user'] = $user ;
-            header("Location: index.php");
+           $role = $user['role'];
+           if($role == "Admin"){
+               unset($user ['password']);
+               $_SESSION['user'] = $user ;
+               header("Location: admin-dashboard.php");
+            }
+            elseif($role == "Teacher"){
+               unset($user ['password']);
+               $_SESSION['user'] = $user ;
+               header("Location: teacher-dashboard.php");
+            }
+            elseif($role == "Student"){
+               unset($user ['password']);
+               $_SESSION['user'] = $user ;
+               header("Location: student-dashboard.php");
+            }
         }
     }
 }
