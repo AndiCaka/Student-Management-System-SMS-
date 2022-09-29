@@ -65,31 +65,29 @@ if(isset($_POST['login'])){
                         <form method="POST" class="col-md-60">
                         <div class="form-group">
                         <label for="username">Username</label>
-        <input 
-            type="text" 
-            class="form-control <?php print (isset($errors['username'])) ? 'is-invalid' : '' ?>" 
-            name="username" 
-            aria-describedby="username_validation" 
-            placeholder="Enter Username"
-            value="<?php print (isset($formValues['username'])) ? $formValues['username'] : '' ?>"
-        >
-        <div id="username_validation" class="invalid-feedback">Username not found!</div>
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input 
-            type="password" 
-            class="form-control  <?php print (isset($errors['password'])) ? 'is-invalid' : '' ?>" 
-            name="password" 
-            placeholder="Enter Password" 
-            area_describedby="password_validation"
-        >
-        <div id="password_validation" class="invalid-feedback">Password does not match!</div>
-    </div>
+                        <input 
+                              type="text" 
+                              class="form-control <?php print (isset($errors['username'])) ? 'is-invalid' : '' ?>" 
+                              name="username" 
+                              aria-describedby="username_validation" 
+                              placeholder="Enter Username"
+                              value="<?php print (isset($formValues['username'])) ? $formValues['username'] : '' ?>"
+                        >
+                        <div id="username_validation" class="invalid-feedback">Username not found!</div>
+                     </div>
+                     <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                              type="password" 
+                              class="form-control  <?php print (isset($errors['password'])) ? 'is-invalid' : '' ?>" 
+                              name="password" 
+                              placeholder="Enter Password" 
+                              area_describedby="password_validation"
+                        >
+                        <div id="password_validation" class="invalid-feedback">Password does not match!</div>
+                     </div>
                            <div class="form-group">
                            <button type="submit" class="btn btn-primary px-4" name="login">Login</button>
-
-      
                         <div class="social-login">
                            <span>Login with</span>
                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="google"><i class="fab fa-google"></i></a>

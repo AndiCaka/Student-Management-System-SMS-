@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <!-- Mirrored from preschool.dreamguystech.com/php-template/forgot-password.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
 <head>
@@ -20,6 +20,11 @@
 </head>
 <body>
 
+=======
+<?php
+require "config.php";
+?>
+>>>>>>> fda8404cf94b250d49233da8dcb7b125a6edb697
 <?php
 if(isset($_POST['register'])){
     $isAccountInDB = "select * from user 
@@ -28,8 +33,8 @@ if(isset($_POST['register'])){
     
     if(!($product = mysqli_fetch_assoc($isAccountQuery))){
         $sql = "INSERT into user 
-        (name, surname, age, gender, username, password, role)
-        VALUES ('".$_POST['name']."', '".$_POST['surname']."', '".$_POST['age']."', '".$_POST['gender']."', '".$_POST['username']."' , '".$_POST['password']."','".$_POST['role']."')";
+        (name, surname, gender, username, password, role)
+        VALUES ('".$_POST['name']."', '".$_POST['surname']."', '".$_POST['gender']."', '".$_POST['username']."' , '".$_POST['password']."','".$_POST['role']."')";
 
         $result = mysqli_query($conn, $sql);
         if(!$result){
@@ -53,6 +58,24 @@ if(isset($_POST['register'])){
 }
 ?>
 
+<!-- Mirrored from preschool.dreamguystech.com/php-template/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" >
+<title>Preskool - Register</title>
+
+<link rel="shortcut icon" href="assets/img/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
 <div class="main-wrapper login-body">
 <div class="login-wrapper">
 <div class="container">
@@ -63,35 +86,57 @@ if(isset($_POST['register'])){
 <div class="login-right">
 <div class="login-right-wrap">
 <h1>Register</h1>
+<<<<<<< HEAD
 
 <form action="https://preschool.dreamguystech.com/php-template/index.php">
 <div class="form-group">
 <input class="form-control" type="text" placeholder="Name">
-</div>
-<div class="form-group">
-<input class="form-control" type="text" placeholder="Surname">
-</div>
-<div class="form-group">
-<input class="form-control" type="text" placeholder="Gender">
-</div>
-<div class="form-group">
-<input class="form-control" type="text" placeholder="Age">
-</div>
-<div class="form-group">
-<input class="form-control" type="text" placeholder="Username">
-</div>
-<div class="form-group">
-<input class="form-control" type="text" placeholder="Password">
-</div>
-<div class="form-group">
-<input class="form-control" type="text" placeholder="Role">
-</div>
+=======
+<p class="account-subtitle">Access to our dashboard</p>
 
+<form method="POST" >
+    <div class="form-group">
+<input class="form-control" type="text" name="name" placeholder="Name">
+>>>>>>> fda8404cf94b250d49233da8dcb7b125a6edb697
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="surname" placeholder="Surname">
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="gender" placeholder="Gender">
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="username" placeholder="Username">
+</div>
+<div class="form-group">
+<input class="form-control" type="password" name="password" placeholder="Password">
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="role" placeholder="Role">
+</div>
 <div class="form-group mb-0">
+<<<<<<< HEAD
 <button class="btn btn-primary btn-block" type="submit">Register</button>
 </div>
 </form>
 
+=======
+<button class="btn btn-primary btn-block" name="register" type="submit">Register</button>
+</div>
+</form>
+
+<div class="login-or">
+<span class="or-line"></span>
+<span class="span-or">or</span>
+</div>
+
+<div class="social-login">
+<span>Register with</span>
+<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="google"><i class="fab fa-google"></i></a>
+</div>
+
+<div class="text-center dont-have">Already have an account? <a href="login.php">Login</a></div>
+>>>>>>> fda8404cf94b250d49233da8dcb7b125a6edb697
 </div>
 </div>
 </div>
@@ -108,5 +153,5 @@ if(isset($_POST['register'])){
 <script src="assets/js/script.js"></script>
 </body>
 
-<!-- Mirrored from preschool.dreamguystech.com/php-template/forgot-password.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
+<!-- Mirrored from preschool.dreamguystech.com/php-template/register.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
 </html>
