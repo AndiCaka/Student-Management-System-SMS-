@@ -222,7 +222,7 @@ studentAccess();
 <div class="page-header">
 <div class="row">
 <div class="col-sm-12">
-<h3 class="page-title">Welcome Bruklin!</h3>
+<h3 class="page-title">Welcome!</h3>
 <ul class="breadcrumb">
 <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
 <li class="breadcrumb-item active">Student Dashboard</li>
