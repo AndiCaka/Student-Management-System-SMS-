@@ -171,7 +171,7 @@
 <li><a href="students.php">Student List</a></li>
 <li><a href="student-details.php">Student View</a></li>
 <li><a href="add-student.php">Student Add</a></li>
-<li><a href="edit-student.php">Student Edit</a></li>
+
 </ul>
 </li>
 <li class="submenu">

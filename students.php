@@ -152,7 +152,7 @@ require "config.php";
                            <li><a href="students.php" class="active">Student List</a></li>
                            <li><a href="student-details.php">Student View</a></li>
                            <li><a href="add-student.php">Student Add</a></li>
-                           <li><a href="edit-student.php">Student Edit</a></li>
+                           
                         </ul>
                      </li>
                      <li class="submenu">
@@ -233,31 +233,31 @@ require "config.php";
                                        $result = mysqli_query($conn, $sql);
                                        if($result->num_rows > 0){
                                              while($user = $result -> fetch_assoc()){
-                                    
-                                               
-                                           ?>
-                                    
-                                       <tr>
-                                             <td><?php  echo $user['id']; ?></td>
-                                             <td><a href="student-details.php" ></a><?php  echo $user['name']; ?></td>
-                                             <td><?php  echo $user['surname']; ?></td>
-                                             <td><?php  echo $user['gender']; ?></td>
-                                             <td><?php  echo $user['username']; ?></td>   
-                                             <td><div>
-                                             <a href="edit-student.php?id=<?php echo $user ['id'];?>" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="students.php?id=<?ph echo $user ['id'];?>" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                             </div></td>
-                                       </tr>
-                                    <?php  
-                                             }
-                                          }
+                           
+                                       
                                     ?>
+                           
+                              <tr>
+                                    <td><?php  echo $user['id']; ?></td>
+                                    <td><a href="student-details.php" ></a><?php  echo $user['name']; ?></td>
+                                    <td><?php  echo $user['surname']; ?></td>
+                                    <td><?php  echo $user['gender']; ?></td>
+                                    <td><?php  echo $user['username']; ?></td>   
+                                    <td><div>
+                                    <a href="edit-student.php?id=<?php echo $user ['id'];?>" class="btn btn-sm bg-success-light mr-2">
+                                    <i class="fas fa-pen"></i>
+                                    </a>
+                                    <a href="students.php?id=<?php echo $user['id'];?>" class="btn btn-sm bg-danger-light" onClick="return confirm('Do you really want to delete');">
+                                    <i class="fa fa-trash" ></i></a>
                                    
-                                   
+                                    </div></td>
+                              </tr>
+                           <?php  
+                                    }
+                                 }
+                           ?>
+                           
+                           
                                        
                                     
                                  </tbody>
