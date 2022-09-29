@@ -256,31 +256,8 @@ require "config.php";
                                              }
                                           }
                                     ?>
-                                    <tr>
-                                       <td>PRE2209</td>
-                                       <td>
-                                          <h2 class="table-avatar">
-                                             <a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-01.jpg" alt="User Image"></a>
-                                             <a href="student-details.php">Aaliyah</a>
-                                          </h2>
-                                       </td>
-                                       <td>10 A</td>
-                                       <td>2 Feb 2002</td>
-                                       <td>Jeffrey Wong</td>
-                                       <td>097 3584 5870</td>
-                                       <td>911 Deer Ridge Drive,USA</td>
-                                       <td class="text-right">
-                                          <div class="actions">
-                                             <a href="edit-student.php" class="btn btn-sm bg-success-light mr-2">
-                                             <i class="fas fa-pen"></i>
-                                             </a>
-                                             <a href="#" class="btn btn-sm bg-danger-light">
-                                             <i class="fas fa-trash"></i>
-                                             </a>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
+                                   
+                                   
                                        
                                     
                                  </tbody>

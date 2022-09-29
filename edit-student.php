@@ -210,19 +210,19 @@
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>First Name</label>
-                                       <input type="text" class="form-control" value="Nathan Humphries">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Last Name</label>
-                                       <input type="text" class="form-control" value="Stephen Marley">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Student Id</label>
-                                       <input type="text" class="form-control" value="PRE1234">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
@@ -240,46 +240,46 @@
                                     <div class="form-group">
                                        <label>Date of Birth</label>
                                        <div>
-                                          <input type="text" class="form-control" value="26 Apr 1994">
+                                          <input type="text" class="form-control" >
                                        </div>
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Class</label>
-                                       <input type="text" class="form-control" value="10">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Religion</label>
-                                       <input type="text" class="form-control" value="Religion">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Joining Date</label>
                                        <div>
-                                          <input type="text" class="form-control" value="4 Jan 2002">
+                                          <input type="text" class="form-control" >
                                        </div>
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Mobile Number</label>
-                                       <input type="text" class="form-control" value="077 3499 9959">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Admission Number</label>
-                                       <input type="text" class="form-control" value="PRE1252">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Section</label>
-                                       <input type="text" class="form-control" value="B">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
@@ -294,31 +294,31 @@
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Father's Name</label>
-                                       <input type="text" class="form-control" value="Stephen Marley">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Father's Occupation</label>
-                                       <input type="text" class="form-control" value="Technician">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Father's Mobile</label>
-                                       <input type="text" class="form-control" value="	402 221 7523">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Father's Email</label>
-                                       <input type="email" class="form-control" value="stephenmarley@gmail.com">
+                                       <input type="email" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                        <label>Mother's Name</label>
-                                       <input type="text" class="form-control" value="Cleary Wong">
+                                       <input type="text" class="form-control" >
                                     </div>
                                  </div>
                                  <div class="col-12 col-sm-6">

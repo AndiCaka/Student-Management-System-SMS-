@@ -74,7 +74,12 @@ if(isset($_POST['register'])){
 <input class="form-control" type="text" name="surname" placeholder="Surname">
 </div>
 <div class="form-group">
-<input class="form-control" type="text" name="gender" placeholder="Gender">
+<select class="form-control" name="gender" placeholder="Gender">
+    <label>Select Gender</label>
+    <option>Female</option>
+    <option>Male</option>
+    
+</select>
 </div>
 <div class="form-group">
 <input class="form-control" type="text" name="username" placeholder="Username">
@@ -83,7 +88,13 @@ if(isset($_POST['register'])){
 <input class="form-control" type="password" name="password" placeholder="Password">
 </div>
 <div class="form-group">
-<input class="form-control" type="text" name="role" placeholder="Role">
+<select class="form-control" name="role" placeholder="Role">
+    <p>Select Role</p>
+    <option>Student</option>
+    <option>Teacher</option>
+    <option>Admin</option>
+</select>
+
 </div>
 <div class="form-group mb-0">
 <button class="btn btn-primary btn-block" name="register" type="submit">Register</button>
