@@ -1,6 +1,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<?php
+require "config.php";
+?>
 
 <!-- Mirrored from preschool.dreamguystech.com/php-template/teachers.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 <head>
@@ -253,7 +256,7 @@
                         </thead>
                         <tbody>
                             <?php
-                                $conn = mysqli_connect('localhost', 'root', '', 'sms');
+                                
 
                                 $sql = "SELECT * FROM user Where role = 'teacher'";
 
