@@ -278,10 +278,10 @@ require "config.php";
 
                                                         <td class="text-right">
                                                             <div class="actions">
-                                                                <a href="update.php?id= <?php echo $row['id'] ?> " class="btn btn-sm bg-success-light mr-2">
+                                                                <a href="edit-teacher.php?id= <?php echo $row['id'] ?> " class="btn btn-sm bg-success-light mr-2">
                                                                     <i class="fas fa-pen"></i>
                                                                 </a>
-                                                                <a href="table.php?id= <?php echo $row['id'] ?> " class="btn btn-sm bg-danger-light">
+                                                                <a href="teachers.php?id= <?php echo $row['id'] ?> " class="btn btn-sm bg-danger-light">
                                                                     <i class="fas fa-trash"></i>
                                                                 </a>
                                                             </div>
