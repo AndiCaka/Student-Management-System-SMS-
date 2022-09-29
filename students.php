@@ -239,7 +239,7 @@ require "config.php";
                                     
                                        <tr>
                                              <td><?php  echo $user['id']; ?></td>
-                                             <td><a href="student-details.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/profiles/avatar-04.jpg" alt="User Image"></a><?php  echo $user['name']; ?></td>
+                                             <td><a href="student-details.php" ></a><?php  echo $user['name']; ?></td>
                                              <td><?php  echo $user['surname']; ?></td>
                                              <td><?php  echo $user['gender']; ?></td>
                                              <td><?php  echo $user['username']; ?></td>   
@@ -264,10 +264,6 @@ require "config.php";
                               </table>
                               <form>
                            </div>
-                              <?php
-                              
-                                 if(isset($_POST['role'])){}
-                                    ?>
                         </div>
                      </div>
                   </div>
