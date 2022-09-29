@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <!-- Mirrored from preschool.dreamguystech.com/php-template/forgot-password.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:58 GMT -->
 <head>
@@ -20,11 +19,9 @@
 </head>
 <body>
 
-=======
 <?php
 require "config.php";
 ?>
->>>>>>> fda8404cf94b250d49233da8dcb7b125a6edb697
 <?php
 if(isset($_POST['register'])){
     $isAccountInDB = "select * from user 

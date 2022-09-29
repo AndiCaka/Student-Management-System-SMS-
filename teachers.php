@@ -270,11 +270,17 @@ if ($result->num_rows > 0) {
             <td> <?php echo $row['password']; ?></td>
             <td> <?php echo $row['gender']; ?></td>
             <td> <?php echo $row['role']; ?></td>
-            <td class="buttons">
-                <a id="editBut" href="update.php?id= <?php echo $row['id']?> " class="btn btn-outline-success btn-sm"> Edit </a>
-                <a id="deleteBut" href="table.php?id= <?php echo $row['id']?> " class="btn btn-outline-danger btn-sm"> Delete </a>
-
-            </td>
+            
+            <td class="text-right">
+            <div class="actions">
+               <a href="update.php?id= <?php echo $row['id']?> " class="btn btn-sm bg-success-light mr-2">
+               <i class="fas fa-pen"></i>
+               </a>
+               <a  href="table.php?id= <?php echo $row['id']?> " class="btn btn-sm bg-danger-light">
+               <i class="fas fa-trash"></i>
+               </a>
+            </div>
+         </td>
             
         </tr>
         <?php 
