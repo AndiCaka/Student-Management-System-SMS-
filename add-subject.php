@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+require "config.php";
+require "authentication.php";
+
+?>
 
 <!-- Mirrored from preschool.dreamguystech.com/php-template/add-subject.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 
@@ -209,7 +214,6 @@
             </div>
         </div>
 
-
         <div class="page-wrapper">
             <div class="content container-fluid">
 
@@ -236,19 +240,25 @@
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
-                                                <label>Subject ID</label>
+                                                <label>Name</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
-                                                <label>Subject Name</label>
+                                                <label>Description</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
-                                                <label>Class</label>
+                                                <label>Price</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label>Status</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>

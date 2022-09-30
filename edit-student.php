@@ -29,10 +29,11 @@
          } else {
       ?>
             <div class="alert alert-success" role="alert"></div>
-            <i class="bi bi-check2-all"></i> <?php echo $_POST['name'] ?> updated successfully!
+            <i class="bi bi-check2-all"></i> <?php echo $_POST['name'] ?> 
             </div>
       <?php
             header("Location: students.php");
+            
          }
       }
       ?>
@@ -191,7 +192,7 @@
                                     <li><a href="students.php">Student List</a></li>
                                     <li><a href="student-details.php">Student View</a></li>
                                     <li><a href="add-student.php">Student Add</a></li>
-
+                                    <li><a href="edit-student.php">Student Edit</a></li>
                                  </ul>
                               </li>
                               <li class="submenu">

@@ -128,11 +128,11 @@ require "config.php";
                         <p class="text-muted mb-0">Administrator</p>
                      </div>
                   </div>
-<<<<<<< HEAD
+
                   <a class="dropdown-item" href="profile.php">My Profile</a>
                   <a class="dropdown-item" href="inbox.php">Inbox</a>
                   <a class="dropdown-item" href="log_out.php">Logout</a>
-=======
+
                </li>
             </ul>
          </div>
@@ -183,21 +183,9 @@ require "config.php";
                      </li>
                       -->
                      
-                     <li class="submenu">
-                        <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
-                        <ul>
-                           <li><a href="login.php">Login</a></li>
-                           <li><a href="register.php">Register</a></li>
-                           <li><a href="forgot-password.php">Forgot Password</a></li>
-                           <li><a href="error-404.php">Error Page</a></li>
-                        </ul>
-                     </li>
-                  </ul>
->>>>>>> 95c6735025cf2b16f8c0ae4ba9ce84696cbe6c8d
-               </div>
-            </li>
-         </ul>
-      </div>
+                     
+                  
+    
 
 
 
