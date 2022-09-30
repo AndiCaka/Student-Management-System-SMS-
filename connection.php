@@ -6,4 +6,5 @@ if(!$conn){
     echo "Error occurred!<br>".mysqli_error();
 }
 
+?>
 
