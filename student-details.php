@@ -27,9 +27,6 @@ $user = $_SESSION['user'];
 </head>
 
 <body>
-  
-
-
     <div class="main-wrapper">
 
         <div class="header">
@@ -169,7 +166,7 @@ $user = $_SESSION['user'];
                         <li class="submenu">
                             <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="index.php">Admin Dashboard</a></li>
+                                <li><a href="admin-dashboard.php">Admin Dashboard</a></li>
                                 <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
                                 <li><a href="student-dashboard.php">Student Dashboard</a></li>
                             </ul>
@@ -179,29 +176,37 @@ $user = $_SESSION['user'];
                             <ul>
                                 <li><a href="students.php">Student List</a></li>
                                 <li><a href="student-details.php" class="active">Student View</a></li>
-                                <li><a href="add-student.php">Student Add</a></li>
-
+                                <?php if($user['role'] == 'Admin'){ ?>
+                                    <li><a href="add-student.php">Student Add</a></li>
+                                    <li><a href="edit-student.php">Student Edit</a></li>
+                                <?php } ?>
                             </ul>
-                        </li>
-                        <li class="submenu">
+                        </li><?php if($user['role'] == 'Admin'){ ?>
+                     <li class="submenu">
                             <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="teachers.php">Teacher List</a></li>
                                 <li><a href="teacher-details.php">Teacher View</a></li>
-                                <li><a href="add-teacher.php">Teacher Add</a></li>
-                                <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                                <?php if($user['role'] == 'Admin'){ ?>
+                                    <li><a href="add-teacher.php">Teacher Add</a></li>
+                                    <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                                <?php } ?>
                             </ul>
                         </li>
-
+                        <?php } ?>
+                        <?php if($user['role'] == 'Admin' ||  $user['role'] == 'Teacher'){ ?>
                         <li class="submenu">
                             <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="subjects.php">Subject List</a></li>
                                 <li><a href="add-subject.php">Subject Add</a></li>
+                                <?php if($user['role'] == 'Admin'){ ?>
                                 <li><a href="edit-subject.php">Subject Edit</a></li>
+                                <?php } ?>
                             </ul>
                         </li>
-
+                        <?php } ?>
+                        
                         <li class="submenu">
                             <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
                             <ul>
@@ -218,7 +223,7 @@ $user = $_SESSION['user'];
             </div>
         </div>
 
-     
+
         <div class="page-wrapper">
             <div class="content container-fluid">
                 <div class="page-header">
@@ -240,42 +245,34 @@ $user = $_SESSION['user'];
                                     <h4>About Me</h4>
                                     <div class="media mt-3">
                                         <img src="assets/img/user.jpg" class="mr-3" alt="...">
-                                        <form>
-                                            <div class="media-body">
-                                            <?php
-                                            if (isset($_GET['user_id'])){
-                                                $sql = "select * from user where id = " . (int)$_GET['user_id'];
-                                                    $result = mysqli_query($conn, $sql);
-                                                    if ($product = mysqli_fetch_assoc($result)) {
-                                                ?>
-                                                <ul>
-                                                    <li>
-                                                        <span class="title-span">Name : </span>
-                                                        <span class="info-span"  ><?php echo $product['name']; ?></span>
-                                                        <!-- <input type="hidden" name="user" value="<?php echo $product['id']; ?>"> -->
-                                                    </li>
-                                                    <li>
-                                                        <span class="title-span">Surname : </span>
-                                                        <span class="info-span"><?php echo $product['surname']; ?></span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="title-span">Gender : </span>
-                                                        <span class="info-span"><?php echo $product['gender']; ?></span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="title-span">Username : </span>
-                                                        <span class="info-span"><?php echo $product['username']; ?></span>
-                                                    </li>
-                                                    <li>
-                                                        <span class="title-span">Role : </span>
-                                                        <span class="info-span"><?php echo $product['role']; ?></span>
-                                                    </li>
-
-                                                </ul>
-                                                <?php
-                                                    }}
-                                                    ?>
-                                            </div>
+                                        <div class="media-body">
+                                            <ul>
+                                                <li>
+                                                    <span class="title-span">Full Name : </span>
+                                                    <span class="info-span">Daisy Parks</span>
+                                                </li>
+                                                <li>
+                                                    <span class="title-span">Department : </span>
+                                                    <span class="info-span">Computer Science</span>
+                                                </li>
+                                                <li>
+                                                    <span class="title-span">Mobile : </span>
+                                                    <span class="info-span">+91 89657 48512</span>
+                                                </li>
+                                                <li>
+                                                    <span class="title-span">Email : </span>
+                                                    <span class="info-span"><a href="https://preschool.dreamguystech.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7216131b010b32151f131b1e5c111d1f">[email&#160;protected]</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title-span">Gender : </span>
+                                                    <span class="info-span">Male</span>
+                                                </li>
+                                                <li>
+                                                    <span class="title-span">DOB : </span>
+                                                    <span class="info-span">22 Apr 1995</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-md-12">
@@ -398,8 +395,6 @@ $user = $_SESSION['user'];
                                             </div>
                                         </div>
                                     </form>
-                                    </form>
-                                    
                                 </div>
                             </div>
                         </div>

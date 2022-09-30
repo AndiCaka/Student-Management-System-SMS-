@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
 require "config.php";
+$user = $_SESSION['user'];
 ?>
 
 <!-- Mirrored from preschool.dreamguystech.com/php-template/teachers.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
@@ -165,27 +166,31 @@ require "config.php";
                         <li class="submenu">
                             <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="index.php">Admin Dashboard</a></li>
+                                <li><a href="admin-dashboard.php">Admin Dashboard</a></li>
                                 <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
                                 <li><a href="student-dashboard.php">Student Dashboard</a></li>
                             </ul>
                         </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
-                            <ul>
-                                <li><a href="students.php">Student List</a></li>
-                                <li><a href="student-details.php">Student View</a></li>
-                                <li><a href="add-student.php">Student Add</a></li>
-                                <li><a href="edit-student.php">Student Edit</a></li>
-                            </ul>
-                        </li>
+                        <?php if($user['role'] == 'Admin'){ ?>
+                            <li class="submenu">
+                                <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
+                                <ul>
+                                    <li><a href="students.php">Student List</a></li>
+                                    <li><a href="student-details.php">Student View</a></li>
+                                    <li><a href="add-student.php">Student Add</a></li>
+                                    <li><a href="edit-student.php">Student Edit</a></li>
+                                </ul>
+                            </li>
+                        <?php } ?>
                         <li class="submenu active">
                             <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="teachers.php" class="active">Teacher List</a></li>
                                 <li><a href="teacher-details.php">Teacher View</a></li>
-                                <li><a href="add-teacher.php">Teacher Add</a></li>
-                                <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                                <?php if($user['role'] == 'Admin'){ ?>
+                                    <li><a href="add-teacher.php">Teacher Add</a></li>
+                                    <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                                <?php } ?>
                             </ul>
                         </li>
 
@@ -194,13 +199,9 @@ require "config.php";
                             <ul>
                                 <li><a href="subjects.php">Subject List</a></li>
                                 <li><a href="add-subject.php">Subject Add</a></li>
-                                <li><a href="edit-subject.php">Subject Edit</a></li>
+                                <!-- <li><a href="edit-subject.php">Subject Edit</a></li> -->
                             </ul>
                         </li>
-                        <li class="menu-title">
-                            <span>Management</span>
-                        </li>
-
                         <li class="submenu">
                             <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
                             <ul>

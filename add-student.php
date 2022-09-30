@@ -5,6 +5,8 @@
 require "config.php";
 require "authentication.php";
 studentAccess();
+$user = $_SESSION['user'];
+
 ?>
 <head>
    <meta charset="utf-8">
@@ -64,6 +66,8 @@ studentAccess();
                                  <div class="media-body">
                                     <p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
                                     <p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+                                    </span>
+                                    
                                  </div>
                               </div>
                            </a>

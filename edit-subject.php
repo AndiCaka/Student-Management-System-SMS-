@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+   require "config.php";
+   $user = $_SESSION['user'];
+?>
 <!-- Mirrored from preschool.dreamguystech.com/php-template/edit-subject.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 
 <head>
@@ -160,7 +163,7 @@
                         <li class="submenu">
                             <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="index.php">Admin Dashboard</a></li>
+                                <li><a href="admin-dashboard.php">Admin Dashboard</a></li>
                                 <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
                                 <li><a href="student-dashboard.php">Student Dashboard</a></li>
                             </ul>
@@ -171,6 +174,7 @@
                                 <li><a href="students.php">Student List</a></li>
                                 <li><a href="student-details.php">Student View</a></li>
                                 <li><a href="add-student.php">Student Add</a></li>
+<<<<<<< HEAD
 
                             </ul>
                         </li>
@@ -203,7 +207,7 @@
                             </ul>
                         </li>
 
-                        </li>
+                               </li>
                     </ul>
                 </div>
             </div>

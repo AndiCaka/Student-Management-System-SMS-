@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Mirrored from preschool.dreamguystech.com/php-template/subjects.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 <?php
 require "config.php";
+$user = $_SESSION['user'];
 ?>
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-   <title>Preskool - Subjects</title>
-   <link rel="shortcut icon" href="assets/img/favicon.png">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
-   <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-   <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-   <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-   <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
-   <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body>
-   <div class="main-wrapper">
-      <div class="header">
-         <div class="header-left">
-            <a href="index.php" class="logo">
+   <!-- Mirrored from preschool.dreamguystech.com/php-template/subjects.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+      <title>Preskool - Subjects</title>
+      <link rel="shortcut icon" href="assets/img/favicon.png">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+      <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+      <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body>
+      <div class="main-wrapper">
+         <div class="header">
+            <div class="header-left">
+               <a href="index.php" class="logo">
                <img src="assets/img/logo.png" alt="Logo">
             </a>
             <a href="index.php" class="logo logo-small">
@@ -128,64 +128,68 @@ require "config.php";
                   <a class="dropdown-item" href="profile.php">My Profile</a>
                   <a class="dropdown-item" href="inbox.php">Inbox</a>
                   <a class="dropdown-item" href="log_out.php">Logout</a>
-               </div>
-            </li>
-         </ul>
-      </div>
-      <div class="sidebar" id="sidebar">
-         <div class="sidebar-inner slimscroll">
-            <div id="sidebar-menu" class="sidebar-menu">
-               <ul>
-                  <li class="menu-title">
-                     <span>Main Menu</span>
-                  </li>
-                  <li class="submenu">
-                     <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
-                     <ul>
-                        <li><a href="index.php">Admin Dashboard</a></li>
-                        <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
-                        <li><a href="student-dashboard.php">Student Dashboard</a></li>
-                     </ul>
-                  </li>
-                  <li class="submenu">
-                     <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
-                     <ul>
-                        <li><a href="students.php">Student List</a></li>
-                        <li><a href="student-details.php">Student View</a></li>
-                        <li><a href="add-student.php">Student Add</a></li>
-                        <li><a href="edit-student.php">Student Edit</a></li>
-                     </ul>
-                  </li>
-                  <li class="submenu">
-                     <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
-                     <ul>
-                        <li><a href="teachers.php">Teacher List</a></li>
-                        <li><a href="teacher-details.php">Teacher View</a></li>
-                        <li><a href="add-teacher.php">Teacher Add</a></li>
-                        <li><a href="edit-teacher.php">Teacher Edit</a></li>
-                     </ul>
-                  </li>
-
-                  <li class="submenu active">
-                     <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
-                     <ul>
-                        <li><a href="subjects.php" class="active">Subject List</a></li>
-                        <li><a href="add-subject.php">Subject Add</a></li>
-                        <li><a href="edit-subject.php">Subject Edit</a></li>
-                     </ul>
-                  </li>
-
-                  <li class="submenu">
-                     <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
-                     <ul>
-                        <li><a href="login.php">Login</a></li>
-                        <li><a href="register.php">Register</a></li>
-                        <li><a href="forgot-password.php">Forgot Password</a></li>
-                        <li><a href="error-404.php">Error Page</a></li>
-                     </ul>
-                  </li>
-
-               </ul>
+               </li>
+            </ul>
+         </div>
+         <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+               <div id="sidebar-menu" class="sidebar-menu">
+                  <ul>
+                     <li class="menu-title">
+                        <span>Main Menu</span>
+                     </li>
+                     <li class="submenu">
+                        <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           <li><a href="admin-dashboarder.php">Admin Dashboard</a></li>
+                           <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
+                           <li><a href="student-dashboard.php">Student Dashboard</a></li>
+                        </ul>
+                     </li>
+                      <?php if ($user['role'] == 'Admin') { ?>
+                     <li class="submenu">
+                        <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           <li><a href="students.php">Student List</a></li>
+                           <li><a href="student-details.php">Student View</a></li>
+                           <li><a href="add-student.php">Student Add</a></li>
+                           <li><a href="edit-student.php">Student Edit</a></li>
+                        </ul>
+                     </li>
+                     <?php } ?>
+                     <li class="submenu">
+                        <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           <li><a href="teachers.php">Teacher List</a></li>
+                           <li><a href="teacher-details.php">Teacher View</a></li>
+                           <?php if($user['role'] == 'Admin'){ ?>
+                              <li><a href="add-teacher.php">Teacher Add</a></li>
+                              <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                           <?php } ?>
+                        </ul>
+                     </li>
+                     <li class="submenu active">
+                        <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           <li><a href="subjects.php" class="active">Subject List</a></li>
+                           <li><a href="add-subject.php">Subject Add</a></li>
+                           <?php if ($user['role'] == 'Admin') { ?>
+                              <li><a href="edit-subject.php">Subject Edit</a></li>
+                           <?php } ?>
+                        </ul>
+                     </li>
+                     
+                     <li class="submenu">
+                        <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           <li><a href="login.php">Login</a></li>
+                           <li><a href="register.php">Register</a></li>
+                           <li><a href="forgot-password.php">Forgot Password</a></li>
+                           <li><a href="error-404.php">Error Page</a></li>
+                        </ul>
+                     </li>
+                     
+                  </ul>
             </div>
          </div>
       </div>

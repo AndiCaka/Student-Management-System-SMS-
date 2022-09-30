@@ -1,9 +1,9 @@
-   <?php
-   require "config.php";
-   ?>
    <!DOCTYPE html>
    <html lang="en">
-
+   <?php
+   require "config.php";
+   $user = $_SESSION['user'];
+   ?>
    <!-- Mirrored from preschool.dreamguystech.com/php-template/edit-student.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 
    <head>
@@ -22,16 +22,16 @@
       <?php
       if (isset($_POST['account_update'])) {
          $sql = "UPDATE user SET name= '" . $_POST['name'] . "',surname = '" . $_POST['surname'] . "',username = '" . $_POST['username'] . "', gender = '" . $_POST['gender'] . "', password = '" . $_POST['password'] . "',  
-      role = '" . $_POST['role'] . "' WHERE id = " . $_POST['user_id'];
+         role = '" . $_POST['role'] . "' WHERE id = " . $_POST['user_id'];
          $result = mysqli_query($conn, $sql);
          if (!$result) {
             echo "An error occured: " . mysqli_error();
          } else {
-      ?>
-            <div class="alert alert-success" role="alert"></div>
-            <i class="bi bi-check2-all"></i> <?php echo $_POST['name'] ?> 
-            </div>
-      <?php
+            ?>
+                  <div class="alert alert-success" role="alert"></div>
+                  <i class="bi bi-check2-all"></i> <?php echo $_POST['name'] ?> updated successfully!
+                  </div>
+            <?php
             header("Location: students.php");
             
          }
@@ -166,7 +166,7 @@
                               </div>
                               <a class="dropdown-item" href="profile.php">My Profile</a>
                               <a class="dropdown-item" href="inbox.php">Inbox</a>
-                              <a class="dropdown-item" href="login.php">Logout</a>
+                              <a class="dropdown-item" href="log_out.php">Logout</a>
                            </div>
                         </li>
                      </ul>
@@ -181,7 +181,7 @@
                               <li class="submenu">
                                  <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                                  <ul>
-                                    <li><a href="index.php">Admin Dashboard</a></li>
+                                    <li><a href="admin-dashboard.php">Admin Dashboard</a></li>
                                     <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
                                     <li><a href="student-dashboard.php">Student Dashboard</a></li>
                                  </ul>
@@ -191,29 +191,29 @@
                                  <ul>
                                     <li><a href="students.php">Student List</a></li>
                                     <li><a href="student-details.php">Student View</a></li>
-                                    <li><a href="add-student.php">Student Add</a></li>
-                                    <li><a href="edit-student.php">Student Edit</a></li>
+                                    <?php if ($user['role'] == 'Admin') { ?>
+                                       <li><a href="add-student.php">Student Add</a></li>
+                                       <li><a href="edit-student.php" class="active">Student Edit</a></li>
+                                    <?php } ?>
                                  </ul>
                               </li>
                               <li class="submenu">
-                                 <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
-                                 <ul>
-                                    <li><a href="teachers.php">Teacher List</a></li>
-                                    <li><a href="teacher-details.php">Teacher View</a></li>
-                                    <li><a href="add-teacher.php">Teacher Add</a></li>
-                                    <li><a href="edit-teacher.php">Teacher Edit</a></li>
-                                 </ul>
-                              </li>
+                            <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="teachers.php">Teacher List</a></li>
+                                <li><a href="teacher-details.php">Teacher View</a></li>
+                                <li><a href="add-teacher.php">Teacher Add</a></li>
+                                <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                            </ul>
 
-                              <li class="submenu">
-                                 <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
-                                 <ul>
-                                    <li><a href="subjects.php">Subject List</a></li>
-                                    <li><a href="add-subject.php">Subject Add</a></li>
-                                    <li><a href="edit-subject.php">Subject Edit</a></li>
-                                 </ul>
-                              </li>
-
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="subjects.php">Subject List</a></li>
+                                <li><a href="add-subject.php">Subject Add</a></li>
+                                <li><a href="edit-subject.php">Subject Edit</a></li>
+                            </ul>
+                        </li>
                               <li class="submenu">
                                  <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
                                  <ul>

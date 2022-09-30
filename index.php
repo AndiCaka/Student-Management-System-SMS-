@@ -4,6 +4,8 @@
 require "config.php";
 // require "authentication.php";
 // adminAccess();
+   require "config.php";
+   $user = $_SESSION['user'];
 ?>
 
 <head>
