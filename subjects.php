@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+require "config.php";
+$user = $_SESSION['user'];
+?>
    <!-- Mirrored from preschool.dreamguystech.com/php-template/subjects.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
    <head>
       <meta charset="utf-8">
@@ -138,36 +142,41 @@
                      <li class="submenu">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="index.php">Admin Dashboard</a></li>
+                           <li><a href="admin-dashboarder.php">Admin Dashboard</a></li>
                            <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
                            <li><a href="student-dashboard.php">Student Dashboard</a></li>
                         </ul>
                      </li>
+                      <?php if ($user['role'] == 'Admin') { ?>
                      <li class="submenu">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
                         <ul>
                            <li><a href="students.php">Student List</a></li>
                            <li><a href="student-details.php">Student View</a></li>
                            <li><a href="add-student.php">Student Add</a></li>
-                           
+                           <li><a href="edit-student.php">Student Edit</a></li>
                         </ul>
                      </li>
+                     <?php } ?>
                      <li class="submenu">
                         <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
                         <ul>
                            <li><a href="teachers.php">Teacher List</a></li>
                            <li><a href="teacher-details.php">Teacher View</a></li>
-                           <li><a href="add-teacher.php">Teacher Add</a></li>
-                           <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                           <?php if($user['role'] == 'Admin'){ ?>
+                              <li><a href="add-teacher.php">Teacher Add</a></li>
+                              <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                           <?php } ?>
                         </ul>
                      </li>
-                     
                      <li class="submenu active">
                         <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
                         <ul>
                            <li><a href="subjects.php" class="active">Subject List</a></li>
                            <li><a href="add-subject.php">Subject Add</a></li>
-                           <li><a href="edit-subject.php">Subject Edit</a></li>
+                           <?php if ($user['role'] == 'Admin') { ?>
+                              <li><a href="edit-subject.php">Subject Edit</a></li>
+                           <?php } ?>
                         </ul>
                      </li>
                      

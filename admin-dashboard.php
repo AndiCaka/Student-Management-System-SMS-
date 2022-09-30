@@ -151,7 +151,7 @@ $title = "Welcome ".$user['name']." ".$user['surname'];
                      <li class="submenu active">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="index.php" class="active">Admin Dashboard</a></li>
+                           <li><a href="admin-dashboard.php" class="active">Admin Dashboard</a></li>
                            <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
                            <li><a href="student-dashboard.php">Student Dashboard</a></li>
                         </ul>

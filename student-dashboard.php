@@ -3,6 +3,7 @@
     <?php
     require "config.php";
     require "authentication.php";
+    studentAccess();
     $user = $_SESSION['user'];
     $title = "Welcome " . $user['name'] . " " . $user['surname'] . "!";
     ?>
@@ -168,7 +169,7 @@
                             <li class="submenu active">
                                 <a href="#"><i class="fas fa-user-graduate"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                                 <ul>
-                                    <li><a href="index.php">Admin Dashboard</a></li>
+                                    <li><a href="admin-dashboard.php">Admin Dashboard</a></li>
                                     <li><a href="teacher-dashboard.php">Teacher Dashboard</a></li>
                                     <li><a href="student-dashboard.php" class="active">Student Dashboard</a></li>
                                 </ul>
@@ -178,29 +179,12 @@
                                 <ul>
                                     <li><a href="students.php">Student List</a></li>
                                     <li><a href="student-details.php">Student View</a></li>
-                                    <li><a href="add-student.php">Student Add</a></li>
-
+                                    <?php if($user['role'] == 'Admin'){ ?>
+                                        <li><a href="add-student.php">Student Add</a></li>
+                                        <li><a href="edit-student.php" class="active">Student Edit</a></li>
+                                    <?php } ?>
                                 </ul>
                             </li>
-                            <!-- <li class="submenu">
-<a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="teachers.php">Teacher List</a></li>
-<li><a href="teacher-details.php">Teacher View</a></li>
-<li><a href="add-teacher.php">Teacher Add</a></li>
-<li><a href="edit-teacher.php">Teacher Edit</a></li>
-</ul>
-</li> -->
-
-                            <!-- <li class="submenu">
-<a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="subjects.php">Subject List</a></li>
-<li><a href="add-subject.php">Subject Add</a></li>
-<li><a href="edit-subject.php">Subject Edit</a></li>
-</ul>
-</li> -->
-
                             <li class="submenu">
                                 <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
                                 <ul>
@@ -210,7 +194,6 @@
                                     <li><a href="error-404.php">Error Page</a></li>
                                 </ul>
                             </li>
-
                         </ul>
                         </li>
                         </ul>
