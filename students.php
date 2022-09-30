@@ -324,7 +324,9 @@ $user = $_SESSION['user'];
                                        </td>
                               </tr>
                            <?php  
+
                                     }}
+
                                     ?>
                                  </tbody>
                               </table>
