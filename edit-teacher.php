@@ -174,9 +174,7 @@
                                 <li><a href="students.php">Student List</a></li>
                                 <li><a href="student-details.php">Student View</a></li>
                                 <li><a href="add-student.php">Student Add</a></li>
-                                <li><a href="edit-student.php">Student Edit</a></li>
-                            </ul>
-                        </li>
+
                         <li class="submenu active">
                             <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
                             <ul>
@@ -184,6 +182,15 @@
                                 <li><a href="teacher-details.php">Teacher View</a></li>
                                 <li><a href="add-teacher.php">Teacher Add</a></li>
                                 <li><a href="edit-teacher.php" class="active">Teacher Edit</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="subjects.php">Subject List</a></li>
+                                <li><a href="add-subject.php">Subject Add</a></li>
+                                <li><a href="edit-subject.php">Subject Edit</a></li>
                             </ul>
                         </li>
 

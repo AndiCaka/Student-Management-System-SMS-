@@ -174,6 +174,37 @@
                                 <li><a href="students.php">Student List</a></li>
                                 <li><a href="student-details.php">Student View</a></li>
                                 <li><a href="add-student.php">Student Add</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="submenu active">
+                            <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="teachers.php">Teacher List</a></li>
+                                <li><a href="teacher-details.php">Teacher View</a></li>
+                                <li><a href="add-teacher.php" class="active">Teacher Add</a></li>
+                                <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                            </ul>
+
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="subjects.php">Subject List</a></li>
+                                <li><a href="add-subject.php">Subject Add</a></li>
+                                <li><a href="edit-subject.php">Subject Edit</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="login.php">Login</a></li>
+                                <li><a href="register.php">Register</a></li>
+                                <li><a href="forgot-password.php">Forgot Password</a></li>
+                                <li><a href="error-404.php">Error Page</a></li>
+                            </ul>
+                        </li>
+
                                 <li><a href="edit-student.php">Student Edit</a></li>
                             </ul>
                         </li>

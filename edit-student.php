@@ -33,6 +33,7 @@
                   </div>
             <?php
             header("Location: students.php");
+            
          }
       }
       ?>

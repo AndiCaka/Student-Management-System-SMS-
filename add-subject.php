@@ -2,6 +2,8 @@
 <html lang="en">
 <?php
 require "config.php";
+require "authentication.php";
+
 $user = $_SESSION['user'];
 ?>
 
@@ -169,6 +171,45 @@ $user = $_SESSION['user'];
                                 <li><a href="student-dashboard.php">Student Dashboard</a></li>
                             </ul>
                         </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="students.php">Student List</a></li>
+                                <li><a href="student-details.php">Student View</a></li>
+                                <li><a href="add-student.php">Student Add</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="teachers.php">Teacher List</a></li>
+                                <li><a href="teacher-details.php">Teacher View</a></li>
+                                <li><a href="add-teacher.php">Teacher Add</a></li>
+                                <li><a href="edit-teacher.php">Teacher Edit</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu active">
+                            <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="subjects.php">Subject List</a></li>
+                                <li><a href="add-subject.php" class="active">Subject Add</a></li>
+                                <li><a href="edit-subject.php">Subject Edit</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="login.php">Login</a></li>
+                                <li><a href="register.php">Register</a></li>
+                                <li><a href="forgot-password.php">Forgot Password</a></li>
+                                <li><a href="error-404.php">Error Page</a></li>
+                            </ul>
+                        </li>
+
+=======
                         <?php if($user['role'] == 'Admin'){ ?>
                             <li class="submenu">
                                 <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
@@ -219,7 +260,6 @@ $user = $_SESSION['user'];
             </div>
         </div>
 
-
         <div class="page-wrapper">
             <div class="content container-fluid">
 
@@ -246,19 +286,25 @@ $user = $_SESSION['user'];
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
-                                                <label>Subject ID</label>
+                                                <label>Name</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
-                                                <label>Subject Name</label>
+                                                <label>Description</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <div class="form-group">
-                                                <label>Class</label>
+                                                <label>Price</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="form-group">
+                                                <label>Status</label>
                                                 <input type="text" class="form-control">
                                             </div>
                                         </div>

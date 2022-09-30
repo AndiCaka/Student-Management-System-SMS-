@@ -208,7 +208,11 @@
                     <div class="page-header">
                         <div class="row">
                             <div class="col-sm-12">
+
+
+
                                 <h3 class="page-title"><?php echo $title ?></h3>
+
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
                                     <li class="breadcrumb-item active">Student Dashboard</li>
@@ -406,11 +410,13 @@
                                                     </li>
                                                 </ul>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-12 col-lg-12 col-xl-3 d-flex">
                             <div class="card flex-fill">
                                 <div class="card-header">
@@ -442,12 +448,14 @@
                                         <div class="calendar-details">
                                             <p>09 am</p>
                                             <h6 class="calendar-blue d-flex justify-content-between align-items-center">Fermentum <span>09am - 10pm</span></h6>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
 
                 </div>
 
@@ -477,6 +485,7 @@
 
         <script src="assets/js/script.js"></script>
     </body>
+
 
     <!-- Mirrored from preschool.dreamguystech.com/php-template/student-dashboard.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:43 GMT -->
 

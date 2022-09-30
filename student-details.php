@@ -2,6 +2,8 @@
 <html lang="en">
 <?php
 require "config.php";
+require "authentication.php";
+studentAccess();
 $user = $_SESSION['user'];
 ?>
 <!-- Mirrored from preschool.dreamguystech.com/php-template/student-details.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:49 GMT -->
@@ -25,7 +27,6 @@ $user = $_SESSION['user'];
 </head>
 
 <body>
-
     <div class="main-wrapper">
 
         <div class="header">

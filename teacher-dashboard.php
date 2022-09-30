@@ -191,7 +191,7 @@ $title = "Welcome " . $user['name'] . " " . $user['surname'] . "!";
                             <ul>
                                 <li><a href="subjects.php">Subject List</a></li>
                                 <li><a href="add-subject.php">Subject Add</a></li>
-                                <!-- <li><a href="edit-subject.php">Subject Edit</a></li> -->
+                                <li><a href="edit-subject.php">Subject Edit</a></li>
                             </ul>
                         </li>
 
