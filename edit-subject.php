@@ -3,7 +3,7 @@
 <?php
    require "config.php";
    $user = $_SESSION['user'];
-?>
+   ?>
 <!-- Mirrored from preschool.dreamguystech.com/php-template/edit-subject.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 28 Oct 2021 11:11:50 GMT -->
 
 <head>
